@@ -1,0 +1,3386 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" href="./imgs/icon.png">
+    <link rel="apple-touch-icon" href="./imgs/icon.png" />
+    <meta name="apple-mobile-web-app-title" content="머시 앤 루미">
+    <title>머시 앤 루미</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <!-- <script src="http://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script> -->
+    <link rel='stylesheet' href='./index.css'>
+    <script src="load.js"></script>
+
+</head>
+
+<body data-role="none" data-enhance="false">
+
+    <!-- 스플래시 -->
+    <div class="loadCon center splash">
+        <div class="con">
+            <img src="./imgs/loading1.png" alt="" id="loadImg">
+            <img src="./imgs/loading2.png" alt="" id="loadImg2">
+            <div class="loadTxt center">loading.....</div>
+        </div>
+    </div>
+
+    <!-- 챗봇 -->
+    <div class="chatContainer" id="chatContainer">
+        <img src="./imgs/question.png" alt="" class="questImg">
+        <div class="infoBox welcom">
+            <img src="./imgs/Avatar.png" alt="" class="mrProfile">
+            <div class="msgBox">
+                <div class="welcomemsg">
+                    <div class="returnTxt">
+                        안녕! 머시랑 루미에요.<br>학교생활에 대해 궁금한게 있다면<br>저희한테 물어보세요
+                    </div>
+                </div>
+                <div class="lastMsg">
+                    <div class="welcomemsg">
+                        <div class="returnTxt">
+                            혹시 무엇을 물어봐야할지 잘 모르시겠나요? 왼쪽 아래 메뉴 버튼을 눌러보세요 저희가 대답할 수 있는 질문들을모아놨어요! ˊ◡ˋ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cC">
+            <!-- 답변 - 텍스트 -->
+        <!-- <div class="myCon"><div class="sendTime">오전 04:37</div><div class="myChat">하잉</div></div>
+        
+        <div class="infoBox">
+            <img src="./imgs/Avatar.png" alt="" class="mrProfile">
+            <div class="msgBox">
+                <div class="lastMsg">
+                    <div class="welcomemsg">
+                        <div class="returnTxt">벗 - 하!</div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- 답변 - 텍스트 + 링크 -->
+        <div class="myCon"><div class="sendTime">오전 04:37</div><div class="myChat">학생문화관</div></div>
+
+        <div class="infoBox">
+            <img src="./imgs/Avatar.png" alt="" class="mrProfile">
+            <div class="msgBox">
+                <div class="lastMsg">
+                    <div class="welcomemsg">
+                        <div class="returnTxt">아래 링크를 통해 학생문화관의 위치를 지도로 확인해보세요!</div>
+                        <div class="linkBox center" onclick="window.open('www.mushirumi.com')">구글 지도를 확인하세요<div
+                                class="linkArrow">></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- 답변 - 텍스트 + 이미지 -->
+    <div class="myCon"><div class="sendTime">오전 04:37</div><div class="myChat">머시 루미 누구니</div></div>
+
+    <div class="infoBox">
+        <img src="./imgs/Avatar.png" alt="" class="mrProfile">
+        <div class="msgBox">
+            <div class="lastMsg">
+                <div class="welcomemsg">
+                    <div class="returnTxt">저희는 머쉬와 루미! 벗들을 위해 유용한 정보를 알려드립니다!<br> ٩( ᐛ )و</div>
+                    <div class="center">
+                        <img src="./imgs/icon.png" alt="" class="returnImg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 답변 - 텍스트 + 이미지 + 링크 -->
+    <div class="infoBox">
+        <img src="./imgs/Avatar.png" alt="" class="mrProfile">
+        <div class="msgBox">
+            <div class="lastMsg">
+                <div class="welcomemsg">
+                    <div class="returnTxt">텍스트 + 이미지 + 링크</div>
+                    <div class="center">
+                        <img src="./imgs/icon.png" alt="" class="returnImg">
+                    </div>
+                    <div class="linkBox center" onclick="window.open('www.mushirumi.com')">구글 지도를 확인하세요<div
+                        class="linkArrow">></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 답변 - 텍스트 + 버튼 -->
+    <div class="infoBox">
+        <img src="./imgs/Avatar.png" alt="" class="mrProfile">
+        <div class="msgBox">
+            <div class="lastMsg">
+                <div class="welcomemsg">
+                    <div class="returnTxt">텍스트 + 버튼</div>
+                    <div class="center rBtn">버튼 1</div>
+                    <div class="center rBtn">버튼 2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 답변 - 텍스트 + float 버튼 -->
+    <div class="infoBox">
+        <img src="./imgs/Avatar.png" alt="" class="mrProfile">
+        <div class="msgBox">
+            <div class="lastMsg">
+                <div class="welcomemsg">
+                    <div class="returnTxt">버튼을 눌러보세요!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- 안내 스와이프 -->
+    <div class="helpContainer" id="hp">
+        <div class="middleCon">
+            <img src="./imgs/cancel_help.png" alt="" class="closeBox">
+            <div class="helpImgCon">
+                <img src="./imgs/chatbot_help1.png" alt="" class="helpImg">
+                <img src="./imgs/chatbot_help2.png" alt="" class="helpImg">
+                <img src="./imgs/chatbot_help3.png" alt="" class="helpImg">
+                <img src="./imgs/chatbot_help4.png" alt="" class="helpImg">
+            </div>
+            <img src="./imgs/circle0.png" alt="" class="circle">
+        </div>
+    </div>
+
+    <!-- 입력창 -->
+    <div class="chatBox" id="cb">
+        <div class="chatBtn"><img class="greenBtn" src="./imgs/chatBtn.png" alt=""></div>
+        <div class="chatTextbox">
+            <input id="chatInput" type="" class="chatTxt" placeholder="메시지를 입력해주세요">
+            <img src="./imgs/send.png" alt="" class="sendBtn" onclick="sendMsg()">
+        </div>
+    </div>
+
+    <!-- 챗봇 floatBtn -->
+    <div class="floatBox" id="fb">
+        <div class="selectInput center">공연</div>
+        <div class="selectInput center">문화</div>
+        <div class="selectInput center">사회과학</div>
+        <div class="selectInput center">연대</div>
+        <div class="selectInput center">종교</div>
+        <div class="selectInput center">체육</div>
+    </div>
+
+    <!-- 캘린더 -->
+    <div class="calContainer" id="calSwipe">
+        <div class="selectMonth"></div>
+        <img src="./imgs/1.png" alt="" class="calander">
+        <img src="./imgs/2.png" alt="" class="calander">
+        <img src="./imgs/3.png" alt="" class="calander">
+        <img src="./imgs/4.png" alt="" class="calander">
+        <img src="./imgs/5.png" alt="" class="calander">
+        <img src="./imgs/6.png" alt="" class="calander">
+        <img src="./imgs/7.png" alt="" class="calander">
+        <img src="./imgs/8.png" alt="" class="calander">
+        <img src="./imgs/9.png" alt="" class="calander">
+        <img src="./imgs/10.png" alt="" class="calander">
+        <img src="./imgs/11.png" alt="" class="calander">
+        <img src="./imgs/12.png" alt="" class="calander">
+    </div>
+    <div class="monthContainer">
+        <div class="middleCon" id="monthCon">
+            <div class="selectBox">
+                <div class="header center">2020년</div>
+                <div class="line center">
+                    <div class="month center month0" id="m0">1월</div>
+                    <div class="month center month1" id="m1">2월</div>
+                    <div class="month center month2" id="m2">3월</div>
+                    <div class="month center month3" id="m3">4월</div>
+                </div>
+                <div class="line center">
+                    <div class="month center month4" id="m4">5월</div>
+                    <div class="month center month5" id="m5">6월</div>
+                    <div class="month center month6" id="m6">7월</div>
+                    <div class="month center month7" id="m7">8월</div>
+                </div>
+                <div class="line center">
+                    <div class="month center month8" id="m8">9월</div>
+                    <div class="month center month9" id="m9">10월</div>
+                    <div class="month center month10" id="m10">11월</div>
+                    <div class="month center month11" id="m11">12월</div>
+                </div>
+                <div class="confirm center">확인</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 수업 채팅방 -->
+    <div class="readyContainer" data-role="none" data-enhance="false">
+        <img class="readyImg" src="./imgs/ready.png" alt="">
+        <div class="readyText">머시와 루미가 아직 열심히 준비중이에요!</div>
+        <div class="readyText">조금만 기다려주세요 :)</div>
+    </div>
+    <!-- 스마트맵 -->
+
+    <div class="mapContainer" id="target">
+
+        <img src="./imgs/smartmap_bg.png" alt="" class="mapBg">
+
+        <img src="./map_building/43.png" alt="" class="building u_43 unClicked">
+        <img src="./map_building/c_43.png" alt="" class="building c_43 clicked">
+
+        <img src="./map_building/61.png" alt="" class="building u_61 unClicked">
+        <img src="./map_building/c_61.png" alt="" class="building c_61 clicked">
+
+        <img src="./map_building/45.png" alt="" class="building u_45 unClicked">
+        <img src="./map_building/c_45.png" alt="" class="building c_45 clicked">
+
+        <img src="./map_building/49.png" alt="" class="building u_49 unClicked">
+        <img src="./map_building/c_49.png" alt="" class="building c_49 clicked">
+
+        <img src="./map_building/50.png" alt="" class="building u_50 unClicked">
+        <img src="./map_building/c_50.png" alt="" class="building c_50 clicked">
+
+        <img src="./map_building/46.png" alt="" class="building u_46 unClicked">
+        <img src="./map_building/c_46.png" alt="" class="building c_46 clicked">
+
+        <img src="./map_building/65.png" alt="" class="building u_65 unClicked">
+        <img src="./map_building/c_65.png" alt="" class="building c_65 clicked">
+
+
+        <img src="./map_building/44.png" alt="" class="building u_44 unClicked">
+        <img src="./map_building/c_44.png" alt="" class="building c_44 clicked">
+
+        <img src="./map_building/63.png" alt="" class="building u_63 unClicked">
+        <img src="./map_building/c_63.png" alt="" class="building c_63 clicked">
+
+        <img src="./map_building/41.png" alt="" class="building u_41 unClicked">
+        <img src="./map_building/c_41.png" alt="" class="building c_41 clicked">
+
+        <img src="./map_building/42.png" alt="" class="building u_42 unClicked">
+        <img src="./map_building/c_42.png" alt="" class="building c_42 clicked">
+
+        <img src="./map_building/58.png" alt="" class="building u_58 unClicked">
+        <img src="./map_building/c_58.png" alt="" class="building c_58 clicked">
+
+        <img src="./map_building/54.png" alt="" class="building u_54 unClicked">
+        <img src="./map_building/c_54.png" alt="" class="building c_54 clicked">
+
+        <img src="./map_building/53.png" alt="" class="building u_53 unClicked">
+        <img src="./map_building/c_53.png" alt="" class="building c_53 clicked">
+
+        <img src="./map_building/62.png" alt="" class="building u_62 unClicked">
+        <img src="./map_building/c_62.png" alt="" class="building c_62 clicked">
+
+        <img src="./map_building/52.png" alt="" class="building u_52 unClicked">
+        <img src="./map_building/c_52.png" alt="" class="building c_52 clicked">
+
+        <img src="./map_building/59.png" alt="" class="building u_59 unClicked">
+        <img src="./map_building/c_59.png" alt="" class="building c_59 clicked">
+
+        <img src="./map_building/13.png" alt="" class="building u_13 unClicked">
+        <img src="./map_building/c_13.png" alt="" class="building c_13 clicked">
+
+        <img src="./map_building/51.png" alt="" class="building u_51 unClicked">
+        <img src="./map_building/c_51.png" alt="" class="building c_51 clicked">
+
+        <img src="./map_building/21.png" alt="" class="building u_21 unClicked">
+        <img src="./map_building/c_21.png" alt="" class="building c_21 clicked">
+
+        <img src="./map_building/48.png" alt="" class="building u_48 unClicked">
+        <img src="./map_building/c_48.png" alt="" class="building c_48 clicked">
+
+        <img src="./map_building/60.png" alt="" class="building u_60 unClicked">
+        <img src="./map_building/c_60.png" alt="" class="building c_60 clicked">
+
+        <img src="./map_building/6.png" alt="" class="building u_6 unClicked">
+        <img src="./map_building/c_6.png" alt="" class="building c_6 clicked">
+
+        <img src="./map_building/5.png" alt="" class="building u_5 unClicked">
+        <img src="./map_building/c_5.png" alt="" class="building c_5 clicked">
+
+        <img src="./map_building/33.png" alt="" class="building u_33 unClicked">
+        <img src="./map_building/c_33.png" alt="" class="building c_33 clicked">
+
+        <img src="./map_building/32.png" alt="" class="building u_32 unClicked">
+        <img src="./map_building/c_32.png" alt="" class="building c_32 clicked">
+
+        <img src="./map_building/77.png" alt="" class="building u_77 unClicked">
+        <img src="./map_building/c_77.png" alt="" class="building c_77 clicked">
+
+        <img src="./map_building/23.png" alt="" class="building u_23 unClicked">
+        <img src="./map_building/c_23.png" alt="" class="building c_23 clicked">
+
+        <img src="./map_building/22.png" alt="" class="building u_22 unClicked">
+        <img src="./map_building/c_22.png" alt="" class="building c_22 clicked">
+
+        <img src="./map_building/24.png" alt="" class="building u_24 unClicked">
+        <img src="./map_building/c_24.png" alt="" class="building c_24 clicked">
+
+        <img src="./map_building/27.png" alt="" class="building u_27 unClicked">
+        <img src="./map_building/c_27.png" alt="" class="building c_27 clicked">
+
+        <img src="./map_building/29.png" alt="" class="building u_29 unClicked">
+        <img src="./map_building/c_29.png" alt="" class="building c_29 clicked">
+
+        <img src="./map_building/30.png" alt="" class="building u_30 unClicked">
+        <img src="./map_building/c_30.png" alt="" class="building c_30 clicked">
+
+        <img src="./map_building/31.png" alt="" class="building u_31 unClicked">
+        <img src="./map_building/c_31.png" alt="" class="building c_31 clicked">
+
+        <img src="./map_building/26.png" alt="" class="building u_26 unClicked">
+        <img src="./map_building/c_26.png" alt="" class="building c_26 clicked">
+
+        <img src="./map_building/78.png" alt="" class="building u_78 unClicked">
+        <img src="./map_building/c_78.png" alt="" class="building c_78 clicked">
+
+        <img src="./map_building/82.png" alt="" class="building u_81 u_82 unClicked" onclick="selectBuild()">
+        <img src="./map_building/c_82.png" alt="" class="building c_81 c_82 clicked">
+
+        <img src="./map_building/88.png" alt="" class="building u_88 unClicked">
+        <img src="./map_building/c_88.png" alt="" class="building c_88 clicked">
+
+        <img src="./map_building/84.png" alt="" class="building u_84 unClicked">
+        <img src="./map_building/c_84.png" alt="" class="building c_84 clicked">
+
+        <img src="./map_building/87.png" alt="" class="building u_87 unClicked">
+        <img src="./map_building/c_87.png" alt="" class="building c_87 clicked">
+
+        <img src="./map_building/83.png" alt="" class="building u_83 unClicked">
+        <img src="./map_building/c_83.png" alt="" class="building c_83 clicked">
+
+        <img src="./map_building/3.png" alt="" class="building u_3 unClicked">
+        <img src="./map_building/c_3.png" alt="" class="building c_3 clicked">
+
+        <img src="./map_building/72.png" alt="" class="building u_72 unClicked">
+        <img src="./map_building/c_72.png" alt="" class="building c_72 clicked">
+
+        <img src="./map_building/74.png" alt="" class="building u_74 unClicked">
+        <img src="./map_building/c_74.png" alt="" class="building c_74 clicked">
+
+        <img src="./map_building/81.png" alt="" class="building u_810 unClicked">
+        <img src="./map_building/c_81.png" alt="" class="building c_810 clicked">
+
+        <img src="./map_building/85.png" alt="" class="building u_85 unClicked">
+        <img src="./map_building/c_85.png" alt="" class="building c_85 clicked">
+
+        <img src="./map_building/80.png" alt="" class="building u_80 unClicked">
+        <img src="./map_building/c_80.png" alt="" class="building c_80 clicked">
+
+        <img src="./map_building/2.png" alt="" class="building u_2 unClicked">
+        <img src="./map_building/c_2.png" alt="" class="building c_2 clicked">
+
+        <img src="./map_building/4.png" alt="" class="building u_4 unClicked">
+        <img src="./map_building/c_4.png" alt="" class="building c_4 clicked">
+
+        <img src="./map_building/8.png" alt="" class="building u_8 unClicked">
+        <img src="./map_building/c_8.png" alt="" class="building c_8 clicked">
+
+        <img src="./map_building/10.png" alt="" class="building u_10 unClicked">
+        <img src="./map_building/c_10.png" alt="" class="building c_10 clicked">
+
+        <img src="./map_building/73.png" alt="" class="building u_73 unClicked">
+        <img src="./map_building/c_73.png" alt="" class="building c_73 clicked">
+
+        <img src="./map_building/71.png" alt="" class="building u_71 unClicked">
+        <img src="./map_building/c_71.png" alt="" class="building c_71 clicked">
+
+        <img src="./map_building/75.png" alt="" class="building u_75 unClicked">
+        <img src="./map_building/c_75.png" alt="" class="building c_75 clicked">
+
+        <img src="./map_building/79.png" alt="" class="building u_79 unClicked">
+        <img src="./map_building/c_79.png" alt="" class="building c_79 clicked">
+
+        <img src="./map_building/1.png" alt="" class="building u_1 unClicked">
+        <img src="./map_building/c_1.png" alt="" class="building c_1 clicked">
+
+        <img src="./map_building/25.png" alt="" class="building u_25 unClicked">
+        <img src="./map_building/c_25.png" alt="" class="building c_25 clicked">
+
+        <div class="selectCateCon" id="sc">
+            <!-- <div id="bus" class="category center">셔틀버스 위치</div> -->
+            <div id="convenience" class="category center">생협, 편의점</div>
+            <div id="schoolMeal" class="category center">학식</div>
+            <div id="restaurant" class="category center">레스토랑</div>
+            <div id="study" class="category center">열람실</div>
+            <div id="print" class="category center">인쇄실</div>
+        </div>
+
+    </div>
+    <div class="searchDiv">
+
+        <div class="topBar" id="tb">
+            <div class="indexBar"></div>
+        </div>
+
+        <div class="backNclose head">
+            <img src="./imgs/back.png" alt="" class="back">
+            <img src="./imgs/cancel.png" alt="" class="close">
+        </div>
+
+        <div class="underSearch">
+
+            <div class="boxSelect">
+                <div class="bHead head">
+                    <div class="lbHead" style="font-weight:700">편의시설</div>
+                    <div class="rbHead head">
+                        <div class="rtxt">전체보기</div>
+                        <img src="./imgs/back.png" alt="" class="mArrow">
+                    </div>
+                </div>
+                <div class="boxLine">
+                    <div class="facilBox convenience" style="background-color:#85CACD" id="convenienceB">
+                        <div class="innerWrap">
+                            <div class="innerFacil"><img src="./imgs/saenghyup_w.png" alt=""
+                                    style="width:15px; height: 12px;"></div>
+                            <div class="innerFacil">생협, 편의점</div>
+                            <div class="innerFacil">19개</div>
+                        </div>
+                    </div>
+                    <div class="facilBox schoolMeal" style="background-color:#F7D78E">
+                        <div class="innerWrap">
+                            <div class="innerFacil"><img src="./imgs/haksick_w.png" alt=""
+                                    style="width:12px; height: 12px;"></div>
+                            <div class="innerFacil">학식</div>
+                            <div class="innerFacil">7개</div>
+                        </div>
+                    </div>
+                    <div class="facilBox restaurant" style="background-color:#F7C88F">
+                        <div class="innerWrap">
+                            <div class="innerFacil"><img src="./imgs/restaurant_w.png" alt=""
+                                    style="width:17px; height: 15px;"></div>
+                            <div class="innerFacil">레스토랑</div>
+                            <div class="innerFacil">19개</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxLine">
+                    <div class="facilBox study" style="background-color:#A7D676">
+                        <div class="innerWrap">
+                            <div class="innerFacil"><img src="./imgs/yeollamsil_w.png" alt=""
+                                    style="width:19.5px; height: 15px;"></div>
+                            <div class="innerFacil">열람실</div>
+                            <div class="innerFacil">16개</div>
+                        </div>
+                    </div>
+                    <div class="facilBox print" style="background-color:#A8DEE0">
+                        <div class="innerWrap">
+                            <div class="innerFacil"><img src="./imgs/print_w.png" alt=""
+                                    style="width:17.6px; height: 18px;"></div>
+                            <div class="innerFacil">인쇄실</div>
+                            <div class="innerFacil">8개</div>
+                        </div>
+                    </div>
+                    <div class="facilBox etc" style="background-color:#B0D597">
+                        <div class="innerWrap">
+                            <div class="innerFacil"><img src="./imgs/gita_w.png" alt=""
+                                    style="width:16px; height: 16px;"></div>
+                            <div class="innerFacil">기타</div>
+                            <div class="innerFacil">17개</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buildilList">
+                <div id="buildTitle" class="bHead head" style="font-weight:700">건물</div>
+
+                <!-- whole -->
+                <div class="bList build_32 wholeBuild">100주년기념도서관(중앙도서관)</div>
+                <div class="bList build_65 wholeBuild">E-House</div>
+                <div class="bList build_8 wholeBuild">ECC</div>
+                <div class="bList build_74 wholeBuild">I-House</div>
+                <div class="bList build_60 wholeBuild">공관</div>
+                <div class="bList build_41 wholeBuild">교육관 A동</div>
+                <div class="bList build_42 wholeBuild">교육관 B동</div>
+                <div class="bList build_71 wholeBuild">국제교육관</div>
+                <div class="bList build_88 wholeBuild">국제기숙사 별관</div>
+                <div class="bList build_72 wholeBuild">다락방</div>
+                <div class="bList build_2 wholeBuild">대강당</div>
+                <div class="bList build_73 wholeBuild">대학교회</div>
+                <div class="bList build_4 wholeBuild">대학원 별관</div>
+                <div class="bList build_43 wholeBuild">법인행정동</div>
+                <div class="bList build_21 wholeBuild">법학관</div>
+                <div class="bList build_5 wholeBuild">본관</div>
+                <div class="bList build_80 wholeBuild">부속유치원</div>
+                <div class="bList build_44 wholeBuild">부속이화금란고등학교</div>
+                <div class="bList build_77 wholeBuild">부속이화금란중학교</div>
+                <div class="bList build_81 wholeBuild">부속초등학교</div>
+                <div class="bList build_45 wholeBuild">산학협력관</div>
+                <div class="bList build_81 wholeBuild">삼성교육문화관</div>
+                <div class="bList build_78 wholeBuild">생활환경관</div>
+                <div class="bList build_48 wholeBuild">아령당</div>
+                <div class="bList build_46 wholeBuild">아산 / 신공학관</div>
+                <div class="bList build_49 wholeBuild">약초원</div>
+                <div class="bList build_6 wholeBuild">약학관</div>
+                <div class="bList build_47 wholeBuild">아산공학관</div>
+                <div class="bList build_22 wholeBuild">연구관</div>
+                <div class="bList build_23 wholeBuild">영학관</div>
+                <div class="bList build_50 wholeBuild">온실</div>
+                <div class="bList build_79 wholeBuild">운동장</div>
+                <div class="bList build_24 wholeBuild">음악관</div>
+                <div class="bList build_83 wholeBuild">이화삼성국제기숙사</div>
+                <div class="bList build_84 wholeBuild">이화신세계관</div>
+                <div class="bList build_85 wholeBuild">이화알프스어린이관</div>
+                <div class="bList build_51 wholeBuild">이화역사관</div>
+                <div class="bList build_25 wholeBuild">이화웰컴센터</div>
+                <div class="bList build_52 wholeBuild">이화포스코관</div>
+                <div class="bList build_82 wholeBuild">이화SK텔레콤관</div>
+                <div class="bList build_53 wholeBuild">인문관</div>
+                <div class="bList build_26 wholeBuild">입학관</div>
+                <div class="bList build_1 wholeBuild">정문 배꽃 벽면</div>
+                <div class="bList build_87 wholeBuild">제2국제기숙사</div>
+                <div class="bList build_31 wholeBuild">조형예술관 조소실기동</div>
+                <div class="bList build_27 wholeBuild">조형예술관 A동 / 자연사박물관</div>
+                <div class="bList build_29 wholeBuild">조형예술관 B동</div>
+                <div class="bList build_30 wholeBuild">조형예술관 C동</div>
+                <div class="bList build_54 wholeBuild">종합과학관</div>
+                <div class="bList build_58 wholeBuild">종합사회복지관</div>
+                <div class="bList build_3 wholeBuild">중강당 / 대학원관</div>
+                <div class="bList build_59 wholeBuild">진선미관</div>
+                <div class="bList build_10 wholeBuild">체육관</div>
+                <div class="bList build_61 wholeBuild">테니스장</div>
+                <div class="bList build_62 wholeBuild">학관</div>
+                <div class="bList build_13 wholeBuild">학생문화관</div>
+                <div class="bList build_63 wholeBuild">한우리집</div>
+
+
+
+
+
+                <!-- convenience -->
+                <div class="bList build_82 f1 convenienceBuild">CU 이화 SK텔레콤관점</div>
+                <div class="bList build_52 f2 convenienceBuild">CU 이화 포스코관점</div>
+                <div class="bList build_63 f3 convenienceBuild">CU 편의점 이대 한우리 기숙사점</div>
+                <div class="bList build_65 f4 convenienceBuild">E-House 이마트 편의점</div>
+                <div class="bList build_8 f5 convenienceBuild">GS25 이화여대점</div>
+                <div class="bList build_42 f6 convenienceBuild">생협 교육관점</div>
+                <div class="bList build_83 f7 convenienceBuild">생협 국제기숙사점</div>
+                <div class="bList build_21 f8 convenienceBuild">생협 법학관점</div>
+                <div class="bList build_78 f9 convenienceBuild">생협 생활환경관점</div>
+                <div class="bList build_84 f10 convenienceBuild">생협 경영관점</div>
+                <div class="bList build_24 f11 convenienceBuild">생협 음악관점</div>
+                <div class="bList build_27 f12 convenienceBuild">생협 조형관점</div>
+                <div class="bList build_54 f13 convenienceBuild">생협 종합과학관점</div>
+                <div class="bList build_32 f14 convenienceBuild">생협 도서관점</div>
+                <div class="bList build_10 f15 convenienceBuild">생협 체육관점</div>
+                <div class="bList build_62 f16 convenienceBuild">생협 학관점</div>
+                <div class="bList build_13 f17 convenienceBuild">생협 학생문화관점</div>
+                <div class="bList build_33 f18 convenienceBuild">생협 헬렌관점</div>
+                <div class="bList build_46 f19 convenienceBuild">생협 공학관점</div>
+
+                <!-- schoolMeal -->
+                <div class="bList build_65 f25 schoolMealBuild">E-House 식당 (201동)</div>
+                <div class="bList build_65 f26 schoolMealBuild">E-House 식당 (301동)</div>
+                <div class="bList build_46 f22 schoolMealBuild">공대 식당</div>
+                <div class="bList build_78 f21 schoolMealBuild">생활관 교직원식당</div>
+                <div class="bList build_78 f20 schoolMealBuild">생활관 학생식당</div>
+                <div class="bList build_63 f23 schoolMealBuild">한우리집 식당</div>
+                <div class="bList build_33 f24 schoolMealBuild">헬렌관 식당</div>
+
+
+                <!-- restaurant -->
+                <div class="bList build_33 f35 restaurantBuild">bluepot (블루포트)</div>
+                <div class="bList build_8 f41 restaurantBuild">MY del PLACE (마이델플레이스)</div>
+                <div class="bList build_71 f27 restaurantBuild">김폴폴</div>
+                <div class="bList build_8 f42 restaurantBuild">닥터로빈</div>
+                <div class="bList build_52 f30 restaurantBuild">더 벤티</div>
+                <div class="bList build_83 f28 restaurantBuild">더브라운베이커리 이대국제 기숙사점</div>
+                <div class="bList build_8 f38 restaurantBuild">뚜레쥬르 이화여대ECC점</div>
+                <div class="bList build_65 f37 restaurantBuild">배스킨라빈스</div>
+                <div class="bList build_63 f34 restaurantBuild">보틀 그라운드 (Bottle Ground)</div>
+                <div class="bList build_8 f40 restaurantBuild">빚은 이화여대ECC점</div>
+                <div class="bList build_8 f43 restaurantBuild">샐러디</div>
+                <div class="bList build_8 f44 restaurantBuild">스무디킹</div>
+                <div class="bList build_8 f39 restaurantBuild">스타벅스</div>
+                <div class="bList build_65 f36 restaurantBuild">에델리아 café</div>
+                <div class="bList build_52 f32 restaurantBuild">오봉도시락</div>
+                <div class="bList build_59 f33 restaurantBuild">자연솜씨, 이화가배당</div>
+                <div class="bList build_8 f45 restaurantBuild">케세이호 (중식당)</div>
+                <div class="bList build_52 f31 restaurantBuild">파리바게뜨</div>
+                <div class="bList build_81 f29 restaurantBuild">황화방</div>
+
+
+
+                <!-- study -->
+                <div class="bList build_84 f50 studyBuild">경영대학 열람실</div>
+                <div class="bList build_46 f48 studyBuild">공과대학 열람실</div>
+                <div class="bList build_21 f47 studyBuild">법학전문대학원 열람실</div>
+                <div class="bList build_42 f46 studyBuild">사범대학 열람실</div>
+                <div class="bList build_52 f51 studyBuild">사회대학 열람실</div>
+                <div class="bList build_6 f49 studyBuild">약학대학 열람실</div>
+                <div class="bList build_8 f59 studyBuild">이화・YBM 열람실</div>
+                <div class="bList build_8 f60 studyBuild">이화・신한 노트북실</div>
+                <div class="bList build_8 f58 studyBuild">이화・신한 열람실</div>
+                <div class="bList build_8 f57 studyBuild">자유열람실</div>
+                <div class="bList build_54 f52 studyBuild">자연대학 열람실</div>
+                <div class="bList build_32 f56 studyBuild">중앙도서관 PC실</div>
+                <div class="bList build_32 f55 studyBuild">중앙도서관 노트북실</div>
+                <div class="bList build_32 f54 studyBuild">중앙도서관 자유열람실</div>
+                <div class="bList build_10 f53 studyBuild">체육대학 열람실</div>
+
+
+                <!-- print -->
+                <div class="bList build_52 f86 printBuild">CU 프린트</div>
+                <div class="bList build_41 f62 printBuild">교육관 복사실</div>
+                <div class="bList build_21 f68 printBuild">법학관 복사실</div>
+                <div class="bList build_46 f67 printBuild">신공학관 복사실</div>
+                <div class="bList build_84 f63 printBuild">신세계관 복사실</div>
+                <div class="bList build_32 f66 printBuild">중앙도서관 복사실</div>
+                <div class="bList build_62 f64 printBuild">학관 복사실</div>
+                <div class="bList build_13 f61 printBuild">학생문화관 복사실</div>
+                <div class="bList build_8 f65 printBuild">한국후지제록스</div>
+
+
+                <!-- etc -->
+                <div class="bList build_8 f78 etcBuild">ECC 휘트니스 센터</div>
+                <div class="bList build_8 f80 etcBuild">교보문고(서점)</div>
+                <div class="bList build_8 f85 etcBuild">구내 안경점</div>
+                <div class="bList build_33 f75 etcBuild">구두 수선소</div>
+                <div class="bList build_78 f72 etcBuild">넥서스트래블(교내여행사)</div>
+                <div class="bList build_8 f81 etcBuild">링코(문구/팬시)</div>
+                <div class="bList build_65 f76 etcBuild">박준 뷰티랩</div>
+                <div class="bList build_78 f71 etcBuild">사진관</div>
+                <div class="bList build_8 f82 etcBuild">세이지약국</div>
+                <div class="bList build_8 f83 etcBuild">소호앤노호(꽃집)</div>
+                <div class="bList build_78 f69 etcBuild">수영장</div>
+                <div class="bList build_27 f73 etcBuild">신촌화방(구내화방)</div>
+                <div class="bList build_8 f79 etcBuild">신한은행</div>
+                <div class="bList build_8 f84 etcBuild">아트하우스모모(영화관)</div>
+                <div class="bList build_13 f74 etcBuild">알뜰사 옷수선</div>
+                <div class="bList build_65 f77 etcBuild">오피스디포 이대점</div>
+                <div class="bList build_78 f70 etcBuild">우체국</div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- sk/ 삼성 셀렉트 -->
+    <div class="builSelecCon center">
+        <div class="whiteSelect">
+            <div onclick="focusBuilding(82)" class="buildBox center" style="border-right: 1px solid #d3d3d3;">이화SK텔레콤관
+            </div>
+            <div onclick="focusBuilding(81)" class="buildBox center">삼성교육문화관</div>
+        </div>
+    </div>
+
+    <!-- 빌딩 정보 출력 -->
+
+    <!-- ECC 8-->
+    <div class="buildingPrintCon info8">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">ECC</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">5:00 - 22:00</div>
+                    <div class="timeEtc center">(시험기간 변동)</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f5">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">GS25</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">평일/주말 07:00 ~ 22:30<br>*연중무휴</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="facilCateDiv schoolMealDiv">
+                
+            </div> -->
+
+                <div class="facilCateDiv restaurantDiv">
+                    <div class="facilLine" id="f45">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">케세이호<br>(중식당)</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">월-토 11:30~21:00<br>(브레이크 타임 : 15:00~17:00)<br>*일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f38">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">뚜레쥬르</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">매일 07:00~19:30</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f39">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">스타벅스</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">평일 7:00~22:00<br>토 8:00~20:00<br>일 9:00~19:00<br>*방학기간 중 단축 영업</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f40">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">빚은</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">평일 8:00~19:00<br>토 9:00~17:00<br>*일,공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f41">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">MY del PLACE</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">평일 8:30~21:00<br>주말 9:00~21:00</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f42">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">닥터로빈</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">학기중(월-금) 08:30~19:00<br>*방학중(월-금) 08:30~18:00<br>*토요일
+                                09:00~14:00<br>*일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f43">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">샐러디</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">평일 8:00~20:00<br>주말 9:00~19:00<br>*공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f44">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">스무디킹</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">월-토 10:00~19:00<br>*일,공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 정보추가 -->
+                <div class="facilCateDiv studyDiv">
+                    <div class="facilLine" id="f57">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">자유열람실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하 2층</div>
+                            <div class="facilTime">학기중(월-금) 6:00~22:00<br>*시험기간 중 24시개방</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f58">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">신한 열람실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하 3층</div>
+                            <div class="facilTime">6:00~22:00<br>*시험기간 중 24시개방</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f59">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">YBM 열람실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하 3층</div>
+                            <div class="facilTime">6:00~22:00<br>*시험기간 중 24시개방</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f60">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">신한 노트북실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하 3층</div>
+                            <div class="facilTime">6:00~22:00<br>*시험기간 중 24시개방</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="facilCateDiv printDiv">
+                    <div class="facilLine" id="f65">
+                        <img src="./imgs/print.png" alt="" class="cateImg">
+                        <div class="facilName">한국후지제록스</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하 4층</div>
+                            <div class="facilTime">평일 8:30~20:00<br>토 9:00~15:00<br>*일요일,공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv etcDiv">
+
+                    <div class="facilLine" id="f78">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">휘트니스 센터</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하 4층 B422호</div>
+                            <div class="facilTime">평일 6:30~21:30<br>토 9:00~17:00<br>*일, 공휴일 휴관</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f79">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">신한은행</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하 4층</div>
+                            <div class="facilTime">평일 9:00-16:00<br>*토,일 공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f80">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">교보문고<br>(서점)</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하 4층</div>
+                            <div class="facilTime">평일 9:00~20:00<br>토 10:00~17:00<br>*일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f81">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">링코<br>(문구/팬시)</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">평일 09:00~20:00<br>토 10:00~17:00<br>*일, 공휴일: 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f82">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">세이지약국</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층 404호</div>
+                            <div class="facilTime">평일 9:30~19:30<br>토 10:00~16:00<br>*일,공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f83">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">소호앤노호<br>(꽃집)</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">평일 9:30-19:30<br>토 9:30-16:40<br>*일,공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f84">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">아트하우스모모<br>(영화관)</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">연중무휴 11:00 ~ 22:00</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f85">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">구내 안경점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">ECC 지하4층</div>
+                            <div class="facilTime">평일 8:30-20:00<br>토 9:00-19:00<br>*일,공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 산학협력관 45-->
+    <div class="buildingPrintCon info45">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">산학협력관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">월-금 07:00~21:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 테니스장 61-->
+    <div class="buildingPrintCon info61">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">테니스장</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">월-토 06:00~19:00 <br> 일 06:00~12:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- 아산 / 신공학관 46-->
+    <div class="buildingPrintCon info46">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">아산 / 신공학관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">24시간 개방</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f19">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협 공학관점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">아산공학관 1층(110호)</div>
+                            <div class="facilTime">학기중(월-금) 08:30~19:00<br>*여름방학(월-금) 08:30~17:30<br>*겨울방학(월-금)
+                                08:30~17:00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv schoolMealDiv">
+                    <div class="facilLine" id="f22">
+                        <img src="./imgs/haksick.png" alt="" class="cateImg">
+                        <div class="facilName">공대 식당</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">신공학관 지하 3층</div>
+                            <div class="facilTime">1. 학기중<br>· 식당<br>점심 11:30-14:00 / 저녁 17:00-18:00<br>*(금요일 석식 운영
+                                없음)<br> · 카페<br>10:00-16:00 (월-목)<br> 10:00-14:00 (금)<br><br>2. 방학중<br>· 식당<br>점심
+                                11:30-13:30<br>· 카페<br>미정</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv studyDiv">
+                    <div class="facilLine" id="f48">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">공과대학 열람실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">신공학관 151호</div>
+                            <div class="facilTime">6시 - 23시</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv printDiv">
+                    <div class="facilLine" id="f67">
+                        <img src="./imgs/print.png" alt="" class="cateImg">
+                        <div class="facilName">신공학관 복사실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">신공학관 지하 2층</div>
+                            <div class="facilTime">평일 9:00~7:00</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- E-House 65-->
+    <div class="buildingPrintCon info65">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">E-House</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">05:00~24:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f4">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">이마트 편의점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">E-House 203동 지하2층</div>
+                            <div class="facilTime">(학기중)<br>평일/주말 8:00~23:00<br>(방학은 변동 가능)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv schoolMealDiv">
+                    <div class="facilLine" id="f25">
+                        <img src="./imgs/haksick.png" alt="" class="cateImg">
+                        <div class="facilName">식당 (201동)</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">E-House 201동 푸드코트</div>
+                            <div class="facilTime">*학기 중 평일<br>-아침: 07:30~09:30<br>-점심: 11:30~14:00<br>- 저녁:
+                                17:00~18:45<br><br>*학기 중 주말,공휴일<br>-아침: 07:30~09:00<br>-점심: 11:30~13:30<br>-저녁:
+                                17:30~18:45</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f26">
+                        <img src="./imgs/haksick.png" alt="" class="cateImg">
+                        <div class="facilName">식당 (301동)</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">E-House 301동 기숙사식당</div>
+                            <div class="facilTime">*학기 중 평일<br>-아점 : 10:30~14:30<br><br>* 학기 중 주말,공휴일,방학<br>-운영없음(201동
+                                식당 이용 부탁드립니다)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv restaurantDiv">
+                    <div class="facilLine" id="f36">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">에델리아 café</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">E-House 203동 지하2층</div>
+                            <div class="facilTime">평일 08:00~19:30<br>주말 09:00~15:30<br>*방학 변동 가능</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f37">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">배스킨라빈스</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">E-House 203동 지하2층</div>
+                            <div class="facilTime">평일 10:00~22:00<br>토 11:00~15:00<br>일 13:00~20:00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv etcDiv">
+                    <div class="facilLine" id="f76">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">박준 뷰티랩</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">E-House 203동 지하2층</div>
+                            <div class="facilTime">평일 10:00~20:00<br>*일 휴무 (방학중 단축 영업)</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f77">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">오피스디포</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">E-House 203동 지하2층</div>
+                            <div class="facilTime">평일 08:30~20:00<br>토 08:30~16:00<br>*일,공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 한우리집 63-->
+    <div class="buildingPrintCon info63">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">한우리집</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">05:00~24:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f3">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">CU 편의점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">한우리집 101동 지하1층</div>
+                            <div class="facilTime">07:00~24:00<br>*주말/방학중 변동 가능</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv schoolMealDiv">
+                    <div class="facilLine" id="f23">
+                        <img src="./imgs/haksick.png" alt="" class="cateImg">
+                        <div class="facilName">한우리집 식당</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">학한우리집 지하1층</div>
+                            <div class="facilTime">*학기 중 평일<br>1. 식당:<br>*조식 : 07:30~09:30<br>*중식: 11:30-14:00<br>*석식:
+                                17:00-18:45<br>2. 편의점 : 07:00~24:00<br>3. 카페 : 07:30~19:00<br><br>*학기중 주말, 공휴일 및 방학 (변동될
+                                수 있음)<br>1. 식당:<br>*조식 : 07:30~09:00<br>*중식: 11:30-13:30<br>*석식: 17:30-18:45<br>2. 편의점 :
+                                07:00~24:00<br>3. 카페 : 07:30~19:00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv restaurantDiv">
+                    <div class="facilLine" id="f34">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">보틀 그라운드</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">한우리집 101동 지하 1층</div>
+                            <div class="facilTime">평일 07:30~19:00<br>*주말/방학 변동 가능</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 교육관 A동 41-->
+    <div class="buildingPrintCon info41">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+
+            <div class="buildingHead">
+                <div class="buildName">교육관 A동</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~23:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv printDiv">
+                    <div class="facilLine" id="f62">
+                        <img src="./imgs/print.png" alt="" class="cateImg">
+                        <div class="facilName">교육관 복사실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">교육관 A동 1층</div>
+                            <div class="facilTime">평일 9:00~7:00<br>토요일 12시까지</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 교육관 B동 42-->
+    <div class="buildingPrintCon info42">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">교육관 B동</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~23:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f6">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협 교육관점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">교육관 B동 1층 (158호)</div>
+                            <div class="facilTime">학기중(월-금) 08:30~19:00<br>*여름방학(월-금) 08:30~17:30<br>*겨울방학(월-금)
+                                08:30~17:00<br>*토요일, 일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv studyDiv">
+                    <div class="facilLine" id="f46">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">사범대학 열람실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">교육관 B동 156호, 255호</div>
+                            <div class="facilTime">8시 - 23시</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 종합사회복지관 58-->
+    <div class="buildingPrintCon info58">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">종합사회복지관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~18:30</div>
+                    <div class="timeEtc center">변동가능</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 종합과학관 54 -->
+    <div class="buildingPrintCon info54">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">종합과학관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">05:00~23:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f13">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">종합과학관 D동 1층(118호)</div>
+                            <div class="facilTime">학기중(월-금) 08:30~18:30<br>*여름방학(월-금) 08:30~17:30<br>*겨울방학(월-금)
+                                08:30~17:00<br>*토요일, 일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv studyDiv">
+                    <div class="facilLine" id="f52">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">자연대학 열람실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">종합과학관 D동 DB204, 205</div>
+                            <div class="facilTime">6시 - 23시</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 인문관 53-->
+    <div class="buildingPrintCon info53">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">인문관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~23:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 학관 62-->
+    <div class="buildingPrintCon info62">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">학관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~22:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f16">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">학관 1층(12F호)</div>
+                            <div class="facilTime">학기중(월-금) 08:30~19:00<br>* 여름방학(월-금) 8:30~17:30<br>*겨울방학(월-금)
+                                08:30~17:00<br>* 토요일, 일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv printDiv">
+                    <div class="facilLine" id="f64">
+                        <img src="./imgs/print.png" alt="" class="cateImg">
+                        <div class="facilName">학관 복사실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">학관 2층</div>
+                            <div class="facilTime">평일 8:00~6:30<br>*토∙일요일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 이화포스코관 52-->
+    <div class="buildingPrintCon info52">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">이화포스코관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~23:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f2">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">CU 포스코관점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">이화포스코관 지하1층</div>
+                            <div class="facilTime">평일 07:00 ~ 23:00<br>토 07:00 ~ 23:00<br>*일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv restaurantDiv">
+                    <div class="facilLine" id="f30">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">더 벤티</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">이화포스코관 지하1층</div>
+                            <div class="facilTime">평일 8:00 ~ 21:00<br>토 9:00 ~ 19:00<br>*일,공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f31">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">파리바게뜨</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">이화포스코관 지하1층</div>
+                            <div class="facilTime">평일 8:00 ~ 21:00<br>토 9:00 ~ 19:00<br>*일,공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f32">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">오봉도시락</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">이화포스코관 지하1층</div>
+                            <div class="facilTime">평일 8:00 ~ 21:00<br>토 9:00 ~ 19:00<br>*일,공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv studyDiv">
+                    <div class="facilLine" id="f51">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">사회대학 열람실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">이화포스코관 651호</div>
+                            <div class="facilTime">6시 - 23시</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv printDiv">
+                    <div class="facilLine" id="f86">
+                        <img src="./imgs/print.png" alt="" class="cateImg">
+                        <div class="facilName">CU 프린트</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">이화포스코관 지하1층 CU내부</div>
+                            <div class="facilTime">평일 07:00 ~ 23:00<br>토 07:00 ~ 23:00<br>*일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 진선미관 59-->
+    <div class="buildingPrintCon info59">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">진선미관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">월-금 06:00~21:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv restaurantDiv">
+                    <div class="facilLine" id="f33">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">자연솜씨,<br>이화가배당</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">진선미관 1층</div>
+                            <div class="facilTime">평일 점심 11:00-14:00<br>평일 저녁 17:00-19:00</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 학생문화관 13-->
+    <div class="buildingPrintCon info13">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">학생문화관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">24시간 개방</div>
+                    <div class="timeEtc center">(밤: 학생증 소지)</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f17">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협 학문관점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">학생문화관 지하1층(B107호)</div>
+                            <div class="facilTime">학기중(월-금) 08:30~19:00<br>*방학중(월-금) 08:30~18:00<br>*토요일
+                                09:00~14:00<br>*일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv printDiv">
+                    <div class="facilLine" id="f61">
+                        <img src="./imgs/print.png" alt="" class="cateImg">
+                        <div class="facilName">학문관 복사실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">학생문화관 지하1층</div>
+                            <div class="facilTime">학기중(월-금) 08:30~19:00<br>*방학중(월-금) 08:30~18:00<br>*토요일
+                                09:00~14:00<br>*일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv etcDiv">
+                    <div class="facilLine" id="f74">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">알뜰사 옷수선</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">학생문화관 지하1층 404호</div>
+                            <div class="facilTime">평일 08:30~19:00<br>토 08:30~14:00</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 이화역사관 51-->
+    <div class="buildingPrintCon info51">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">이화역사관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">월-금 09:30~16:30 <br> 토 09:30~12:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 법학관 21-->
+    <div class="buildingPrintCon info21">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">법학관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">24시간 개방</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f8">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협 법학관점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">법학관 지하1층</div>
+                            <div class="facilTime">학기중(월-금) 08:30~18:30<br>*여름방학(월-금) 08:30~17:30<br>*겨울방학(월-금)
+                                08:30~17:00<br>*토요일, 일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv studyDiv">
+                    <div class="facilLine" id="f47">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">법학대학원 열람실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">법학관 431호</div>
+                            <div class="facilTime">6시 - 23시</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv printDiv">
+                    <div class="facilLine" id="f68">
+                        <img src="./imgs/print.png" alt="" class="cateImg">
+                        <div class="facilName">법학관 복사실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">법학관 지하 1층</div>
+                            <div class="facilTime">평일 9:00~7:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 아령당 48-->
+    <div class="buildingPrintCon info48">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">아령당</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~18:30</div>
+                    <div class="timeEtc center">변동가능</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 공관 60-->
+    <div class="buildingPrintCon info60">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">공관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">학생출입 불가</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 약학관 6-->
+    <div class="buildingPrintCon info6">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">약학관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~18:30</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="facilCateDiv studyDiv">
+                    <div class="facilLine" id="f49">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">약학대학 열람실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">약학관 B동 405호</div>
+                            <div class="facilTime">8시 - 22시</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 본관 5-->
+    <div class="buildingPrintCon info5">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">본관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~19:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 헬렌관 33-->
+    <div class="buildingPrintCon info33">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">헬렌관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~21:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f18">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협 헬렌관점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">헬렌관 3층 식당 옆(307호)</div>
+                            <div class="facilTime">학기중(월-금) 08:30~18:30<br>* 여름방학(월-금) 18:30~17:30<br>*겨울방학(월-금)
+                                08:30~17:00<br>* 토요일, 일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv schoolMealDiv">
+                    <div class="facilLine" id="f24">
+                        <img src="./imgs/haksick.png" alt="" class="cateImg">
+                        <div class="facilName">헬렌관 식당</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">헬렌관 3층</div>
+                            <div class="facilTime">평일 중식: 10:30~14:30<br>평일 석식: 16:30~18:30<br>(금요일 16:00~17:00)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv restaurantDiv">
+                    <div class="facilLine" id="f35">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">bluepot</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">헬렌관 지하 1층</div>
+                            <div class="facilTime">평일 08:00~20:00<br>주말 10:00~18:00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv etcDiv">
+                    <div class="facilLine" id="f75">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">구두 수선소</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">헬렌관 지하</div>
+                            <div class="facilTime">평일 9:00-18:00</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 100주년기념도서관 32-->
+    <div class="buildingPrintCon info32">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">100주년기념도서관 (중앙도서관)</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">월-금 09:00~22:00 <br> 토 09:00~15:00</div>
+                    <div class="timeEtc center">열람실 24시간 개방</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f14">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협 도서관점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">중앙도서관 지하1층 (B103-2호)</div>
+                            <div class="facilTime">학기중(월-금) 08:30~22:00<br>학기중 휴일 09:00~19:00<br>*여름/겨울방학(월-금)
+                                08:30~19:00<br>*방학중 휴일 09:00~17:00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv studyDiv">
+                    <div class="facilLine" id="f54">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">자유열람실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">중앙도서관 지하 1층</div>
+                            <div class="facilTime">24시간 (24:00-05:00 출입불가)</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f55">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">노트북실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">중앙도서관 1층</div>
+                            <div class="facilTime">24시간 (24:00-05:00 출입불가)</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f56">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">PC실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">중앙도서관 지하 1층</div>
+                            <div class="facilTime">24시간 (24:00-05:00 출입불가)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv printDiv">
+                    <div class="facilLine" id="f66">
+                        <img src="./imgs/print.png" alt="" class="cateImg">
+                        <div class="facilName">중앙도서관 복사실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">중앙도서관 4층</div>
+                            <div class="facilTime">평일 9:00~7:00</div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 영학관 23-->
+    <div class="buildingPrintCon info23">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">영학관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">24시간 개방</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 연구관 22-->
+    <div class="buildingPrintCon info22">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">연구관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~18:30</div>
+                    <div class="timeEtc center">변동가능</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 음악관 24-->
+    <div class="buildingPrintCon info24">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">음악관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~22:40</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f11">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협 음악관점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">음악관 1층 (112호)</div>
+                            <div class="facilTime">학기중(월-금) 08:30~19:00<br>*여름방학(월-금) 08:30~17:30<br>*겨울방학(월-금)
+                                08:30~17:00<br>*토요일, 일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 조형예술관 A동 / 자연사박물관 27-->
+    <div class="buildingPrintCon info27">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">조형예술관 A동 / 자연사박물관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~23:00 /<br> 월-토 10:00~16:00</div>
+                    <div class="timeEtc center">조예 :24시간 출입(학생증 소지)</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f12">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협 조형관점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">조형관 A동 1층 (19N호)</div>
+                            <div class="facilTime">학기중(월-금) 08:30~19:00<br>*여름방학(월-금) 08:30~17:30<br>*겨울방학(월-금)
+                                08:30~17:00<br>*토요일, 일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv etcDiv">
+                    <div class="facilLine" id="f73">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">신촌화방<br>(구내화방)</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">조형예술대 A동 1층</div>
+                            <div class="facilTime">평일 9:00~19:00<br>*토∙일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 조형예술관 B동 29-->
+    <div class="buildingPrintCon info29">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">조형예술관 B동</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~23:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 조형예술관 C동 30-->
+    <div class="buildingPrintCon info30">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">조형예술관 C동</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~23:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 조형예술관 조소실기동 31-->
+    <div class="buildingPrintCon info31">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">조형예술관 조소실기동</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~23:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 생활환경관 78-->
+    <div class="buildingPrintCon info78">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">생활환경관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~22:00</div>
+                    <div class="timeEtc center">24시간 출입(학생증 소지)</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f9">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">생활환경관 지하1층 (대학건강센터)</div>
+                            <div class="facilTime">학기중(월-금) 08:30~18:30<br>*여름방학(월-금) 08:30~17:30<br>*겨울방학(월-금)
+                                08:30~17:00<br>*토요일, 일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv schoolMealDiv">
+                    <div class="facilLine" id="f20">
+                        <img src="./imgs/haksick.png" alt="" class="cateImg">
+                        <div class="facilName">생활관 학생식당</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">생활환경관 1층</div>
+                            <div class="facilTime">1. 학기 중 평일(10:30~19:00)<br>- 아침<br>베이커리 & 핫도그류(까페드림)<br>- 점심<br>코너별
+                                상이<br>HOT STEW, RICE, SNACK(분식-떡볶이, 순대 등) :　10:30~품절 시<br>AST & NOODLE, SPECIAL :
+                                11:30~품절 시<br>PHO SOME : 10:00~19:00 (단, 덮밥류는 15:00~19:00)<br><br>2. 방학 중 (점심 탕코너만
+                                운영)<br>식당 - 11:30~13:30<br>까페 - 11:30~14:30</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f21">
+                        <img src="./imgs/haksick.png" alt="" class="cateImg">
+                        <div class="facilName">교직원식당</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">생활환경관 1층</div>
+                            <div class="facilTime">이용시간 : 11:30 부터 14:30 까지<br>* 방학중 단축운영 11:30부터 13:30까지</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv etcDiv">
+                    <div class="facilLine" id="f69">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">수영장</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">생활환경관 지하</div>
+                            <div class="facilTime">평일 7:00~19:00<br>토 9:00~13:00<br>*일, 공휴일 휴관</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f70">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">우체국</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">생활환경관 2층</div>
+                            <div class="facilTime">평일 9:00~18:00<br>*토,일 공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f71">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">사진관</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">생활환견광 학생식당 로비</div>
+                            <div class="facilTime">평일 10:00~19:00<br>토 11:00~17:00<br>*일,공휴일 휴무</div>
+                        </div>
+                    </div>
+
+                    <div class="facilLine" id="f72">
+                        <img src="./imgs/gita.png" alt="" class="cateImg">
+                        <div class="facilName">넥서스트래블<br>(교내여행사)</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">생활관 지하1층</div>
+                            <div class="facilTime">평일 09:00~18:00<br>*토,일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 이화SK텔레콤관 82-->
+    <div class="buildingPrintCon info82">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">이화SK텔레콤관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~23:00</div>
+                    <div class="timeEtc center">24시간 출입(학생증 소지)</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f1">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">CU 정보관점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">이화 SK텔레콤관 지하 1층</div>
+                            <div class="facilTime">평일, 토요일 07:00 ~ 23:00<br>*일요일,공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 삼성교육문화관 82 -> 81-->
+    <div class="buildingPrintCon info81">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">삼성교육문화관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~23:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv restaurantDiv">
+                    <div class="facilLine" id="f29">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">황화방</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">이화·삼성 교육문화관 1층</div>
+                            <div class="facilTime">평일 08:00 ~ 19:00<br>토 08:00 ~ 15:00<br>*일,공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 국제기숙사 별관 88-->
+    <div class="buildingPrintCon info88">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">국제기숙사 별관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~18:30</div>
+                    <div class="timeEtc center">변동가능</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 이화신세계관 84-->
+    <div class="buildingPrintCon info84">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">이화신세계관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">07:00~23:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f10">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협 경영관점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">신세계 경영관 지하1층 (B112호)</div>
+                            <div class="facilTime">학기중(월-금) 08:30~18:30<br>*여름방학(월-금) 08:30~17:30<br>*겨울방학(월-금)
+                                08:30~17:00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv printDiv">
+                    <div class="facilLine" id="f63">
+                        <img src="./imgs/print.png" alt="" class="cateImg">
+                        <div class="facilName">신세계관 복사실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">신세계관 지하1층</div>
+                            <div class="facilTime">평일 9:00~7:00<br>토요일 12시까지</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv studyDiv">
+                    <div class="facilLine" id="f50">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">경영대학 열람실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">이화신세계관 104호</div>
+                            <div class="facilTime">8시 - 23시</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 제2국제기숙사 87-->
+    <div class="buildingPrintCon info87">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">제2국제기숙사</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">24시간 개방</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 이화삼성국제기숙사 83-->
+    <div class="buildingPrintCon info83">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">이화삼성국제기숙사</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">24시간 개방</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f7">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협 국제기숙사점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">대학원기숙사 지하1층(G194호)</div>
+                            <div class="facilTime">학기중(월-금) 09:00~19:00<br>*여름방학(월-금) 09:00~18:00<br>*겨울방학(월-금)
+                                09:00~17:30<br>*토요일, 일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv restaurantDiv">
+                    <div class="facilLine" id="f28">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">더브라운베이커리</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">국제기숙사 지하1층</div>
+                            <div class="facilTime">평일 8:00~19:00<br>*토, 일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- 중강당 3-->
+    <div class="buildingPrintCon info3">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">중강당</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~18:30</div>
+                    <div class="timeEtc center">변동가능</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 대학원관 3-->
+    <div class="buildingPrintCon info3">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">중강당 / 대학원관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">05:00~23:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 다락방 72-->
+    <div class="buildingPrintCon info72">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">다락방</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~18:30</div>
+                    <div class="timeEtc center">변동가능</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- I-House 74-->
+    <div class="buildingPrintCon info74">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">I-House</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">24시간 개방</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 대강당 2-->
+    <div class="buildingPrintCon info2">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">대강당</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">출입불가</div>
+                    <div class="timeEtc center">일정 시 출입가능</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 대학원 별관 4-->
+    <div class="buildingPrintCon info4">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">대학원 별관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~18:30</div>
+                    <div class="timeEtc center">변동가능</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 체육관 10-->
+    <div class="buildingPrintCon info10">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">체육관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">07:00~23:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv convenienceDiv">
+                    <div class="facilLine" id="f15">
+                        <img src="./imgs/saenghyup.png" alt="" class="cateImg">
+                        <div class="facilName">생협 체육관점</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">체육관 B동 지하1층 (B111호)</div>
+                            <div class="facilTime">학기중(월-금) 08:30~18:30<br>*방학, 토요일, 일요일, 공휴일 휴무</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="facilCateDiv studyDiv">
+                    <div class="facilLine" id="f53">
+                        <img src="./imgs/yeollamsil.png" alt="" class="cateImg">
+                        <div class="facilName">체육대학 열람실</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">체육관 C동 105호</div>
+                            <div class="facilTime">6시 - 22시</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 대학교회 73-->
+    <div class="buildingPrintCon info73">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">대학교회</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~21:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 국제교육관 71-->
+    <div class="buildingPrintCon info71">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">국제교육관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">06:00~22:30</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+
+                <div class="facilCateDiv restaurantDiv">
+                    <div class="facilLine" id="f27">
+                        <img src="./imgs/restaurant.png" alt="" class="cateImg">
+                        <div class="facilName">김폴폴</div>
+                        <div class="facilInfo">
+                            <div class="facilPosition center">국제교육관 로비층 (2,3층)</div>
+                            <div class="facilTime">평일 11:30 ~ 19:30<br>(브레이크 타임 : 14:30~17:00)</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 100주년기념박물관 75-->
+    <div class="buildingPrintCon info75">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">100주년기념박물관</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">월-토 9:30~17:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 운동장 79-->
+    <div class="buildingPrintCon info79">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">운동장</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">24시간 개방</div>
+                    <div class="timeEtc center">공간사용신청 후 사용</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 정문 배꽃 벽면 1-->
+    <div class="buildingPrintCon info1">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">정문 배꽃 벽면</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">24시간 개방</div>
+                    <div class="timeEtc center">외부인출입시간 - 22:00</div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 이화웰컴센터 25-->
+    <div class="buildingPrintCon info25">
+        <div class="scrollCon">
+            <img src="./imgs/cancel.png" alt="" class="buildCloise">
+            <div class="buildingHead">
+                <div class="buildName">이화웰컴센터</div>
+                <div class="bildTimeLine">
+                    <img src="./imgs/clock.png" alt="" class="cateImg">
+                    <div class="timeTxt center">월-토 09:30 ~17:00</div>
+                    <div class="timeEtc center"></div>
+                </div>
+            </div>
+
+            <div class="buildingPrint">
+                <div class="notFacil">편의시설 없음</div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- 언더바 -->
+    <img style="display: flex;" id="under1" class="underIcon" src="./imgs/under1.png" alt="">
+    <img id="under2" class="underIcon" src="./imgs/under2.png" alt="">
+    <img id="under3" class="underIcon" src="./imgs/under3.png" alt="">
+    <img id="under4" class="underIcon" src="./imgs/under4.png" alt="">
+
+    <div class="underBar">
+        <div class="clickArea" onclick="show(1)"></div>
+        <div class="clickArea" onclick="show(2)"></div>
+        <div class="clickArea" onclick="show(3)"></div>
+        <div class="clickArea" onclick="show(4)"></div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script>
+    //로딩 이미지
+    setInterval(function () {
+        let next_src;
+        next_src = $('#loadImg').attr('src')[14] == '1' ? '2' : '1';
+        document.getElementById("loadImg").src = "./imgs/loading" + next_src + ".png";
+    }, 800);
+
+    // 저장
+    localStorage.clear();
+    if (!localStorage.inputTxt) {
+        let txts = []
+        localStorage.setItem("inputTxt", JSON.stringify(txts));
+        console.log('hi')
+        console.log(localStorage.inputTxt)
+    } else {
+        console.log(localStorage.inputTxt)
+    }
+
+    //불러오기
+    for (var txtItem of JSON.parse(localStorage.getItem("inputTxt"))) {
+        //console.log(txtItem)
+        document.getElementById('cC').innerHTML += '<div class="myCon">' + '<div class="sendTime">' +
+            txtItem.middle + txtItem.hour + ':' + txtItem.minutes + '</div>' + '<div class="myChat">' + txtItem.txt +
+            '</div>' + '</div>'
+    }
+
+    // usesr? -iPhone check
+    var UserAgent = navigator.platform;
+    //var varUA = navigator.userAgent.toLowerCase();
+    let isIphone = UserAgent.match(/i(Phone|Pod)/i) != null
+
+
+    // 카테고리
+    let globalCategory;
+    // prevent Resize
+    let disableResize = false;
+    let searchOff = true;
+    var isChat = true;
+    let undersize = false
+    let chatScroll = 0
+
+    var initialHeight = window.innerHeight;
+    let underHeight = $('#under1').height();
+    var date = new Date();
+    var month = date.getMonth();
+    var winWidth = window.innerWidth;
+
+    $(document).ready(function () {
+        load()
+        let mapCategory = 'none';
+        //스마트맵
+
+        $('.unClicked').click(function (e) {
+            globalCategory = ""
+            $('.category').css({
+                'color': 'black',
+                'background-color': 'white'
+            })
+            $('.clicked').css("transform", "");
+            $('.clicked').css('display', 'none')
+            $('.unClicked').css('display', 'block')
+            let id = e.target.classList[1].substring(2)
+            if (id != '81')
+                focusBuilding(id);
+        })
+
+        $('.clicked').click(function (e) {
+            let id = e.target.classList[1].substring(2)
+
+            if (!globalCategory && globalCategory != 'bus') {
+                $(this).css('display', 'none')
+                $(this).prev().css('display', 'flex')
+                $('.buildingPrintCon').css('display', 'none')
+            } else {
+                focusBuilding(id)
+                $('.c_' + id).css("transform", "scale(1.15)");
+            }
+        })
+
+        //sk, 삼성문화관 클릭
+        $('.buildBox').click(function () {
+            $('.builSelecCon').css('display', 'none')
+        })
+
+        $('.buildCloise').click(function () {
+            //모든 건물 unclick 이미지로
+            globalCategory = ""
+            $('.category').css({
+                'color': 'black',
+                'background-color': 'white'
+            })
+            $('.clicked').css("transform", "");
+            $('.clicked').css('display', 'none')
+            $('.unClicked').css('display', 'block')
+
+            //창 끄기
+            $('.buildingPrintCon').css('display', 'none')
+        })
+
+
+        //float button
+
+        var cateCon = document.getElementById('sc')
+        console.log(cateCon)
+
+        // Register touchstart and touchend listeners for element 'source'
+        var clientX;
+
+        cateCon.addEventListener('touchstart', function (e) {
+            // Cache the client X/Y coordinates
+            clientX = e.touches[0].clientX;
+
+        }, false);
+
+        cateCon.addEventListener('touchend', function (e) {
+
+            var deltaX = e.changedTouches[0].clientX - clientX;
+            var curX = parseInt($('.selectCateCon').css('left').replace('px', ''))
+
+            console.log(curX + deltaX)
+
+            if (curX + deltaX < -170) {
+                $(".selectCateCon").animate({
+                    left: '-175px'
+                }, 100, 'swing');
+            } else if (curX + deltaX < 0) {
+                $(".selectCateCon").animate({
+                    left: curX + deltaX + 'px'
+                }, 100, 'swing');
+            } else {
+                $(".selectCateCon").animate({
+                    left: '0px'
+                }, 100, 'swing');
+            }
+        }, false);
+
+        //search bar 위로 올리기
+
+        var topBar = document.getElementById('tb')
+        console.log(topBar)
+
+        var clientY;
+
+        topBar.addEventListener('touchstart', function (e) {
+            // Cache the client X/Y coordinates
+            clientY = e.touches[0].clientY;
+            console.log(clientY)
+
+        }, false);
+
+        topBar.addEventListener('touchend', function (e) {
+
+            var deltaY = e.changedTouches[0].clientY - clientY;
+
+            console.log(deltaY)
+
+            if (deltaY < 0) {
+
+                $('body').css('overflow-y', 'hidden')
+
+
+                searchOff = false;
+
+                $(".selectCateCon").animate({
+                    'opacity': '0'
+                }, 600, 'swing');
+
+                // $('.selectCateCon').css('display' , 'none')
+                $(".searchDiv").animate({
+                    'top': '-45px'
+                }, 1000, 'swing', function () {
+                    $('.mapContainer').css('position',
+                    'fixed'); // applies display: none; to the element .panel
+                });
+
+
+            }
+
+        }, false);
+
+        ///서치바 작동코드
+        $('.bList').css('display', 'none')
+        $('.wholeBuild').css('display', 'block')
+
+        //위 엑스바, 뒤로가기
+        let backPos = false
+        $(".close").click(function () {
+
+            $(".selectCateCon").animate({
+                'opacity': '1'
+            }, 600, 'swing');
+
+            $(".searchDiv").animate({
+                'top': window.innerHeight - underHeight - 45 + 'px'
+            }, 800, 'swing');
+
+            $('body').css('overflow-y', 'auto');
+            $('.mapContainer').css('position', 'relative');
+            window.scrollTo(0, window.innerHeight / 4);
+            document.getElementById('target').scrollTo(window.innerWidth / 2, 0)
+            searchOff = true;
+        });
+
+
+        // 전체보기
+        $(".rbHead").click(function () {
+            buildPrint('편의시설')
+            $('#buildTitle').text('편의시설')
+            $('.bList').css('display', 'block')
+            $('.wholeBuild').css('display', 'none')
+
+        });
+
+
+        // 뒤로가기
+        $(".back").click(function () {
+            $('.boxSelect').css('display', 'block')
+            $('.buildilList').css('height', $('.underSearch').height() - $('.boxSelect').height() +
+                'px')
+            $('#buildTitle').text('건물')
+
+            //카테고리 해당 건물 출력
+            $('.bList').css('display', 'none')
+            $('.wholeBuild').css('display', 'block')
+
+        });
+
+        // 박스클릭
+        $(".facilBox").click(function (e) {
+            let ct = this.classList[1]
+            buildPrint(ct)
+        });
+
+        // 시설, 건물 눌렀을 때
+        $(".bList").click(function (e) {
+            $('.mapContainer').css('position', 'relative');
+            let buildId = e.target.classList[1].substring(6)
+            let facilId = e.target.classList[2]
+
+            // focus
+            let offsetTop = $('.c_' + buildId).css('top').replace('px', '')
+            let offsetLeft = $('.c_' + buildId).css('left').replace('px', '')
+            let scrollT = Number(offsetTop) - window.innerHeight / 4
+            if (scrollT > 40) {
+                scrollT += 130
+            }
+            let scrollL = Number(offsetLeft) - window.innerWidth / 4
+            $(window).scroll(function (event) {
+                console.log($(window).scrollTop());
+
+            });
+            window.scrollTo(0, scrollT);
+            document.getElementById('target').scrollTo(scrollL, 0)
+
+            // building정보 출력
+            $('.clicked').css('display', 'none')
+            focusBuilding(buildId, facilId)
+            $('body').css('overflow-y', 'auto');
+
+        });
+
+
+        //카테고리 선택
+        $(".category").click(function (e) {
+            console.log(e.target.id)
+            console.log(globalCategory)
+            if (!globalCategory || globalCategory != e.target.id) {
+                globalCategory = e.target.id
+                selectCategory(e.target.id)
+            } else {
+                globalCategory = "";
+                $('.category').css({
+                    'color': 'black',
+                    'background-color': 'white'
+                })
+                $('.clicked').css("transform", "");
+                $('.clicked').css('display', 'none')
+                $('.unClicked').css('display', 'block')
+            }
+        });
+
+
+        $('.ui-page').unwrap()
+
+        // help swipe
+        let currSwipe = 0;
+        let help = document.getElementById('hp')
+
+        help.addEventListener('touchstart', function (e) {
+            // Cache the client X/Y coordinates
+            clientX = e.touches[0].clientX;
+
+        }, false);
+
+        help.addEventListener('touchend', function (e) {
+
+            var deltaX = e.changedTouches[0].clientX - clientX;
+
+            console.log(deltaX)
+
+            if (deltaX < -50) {
+                if (currSwipe < 3) currSwipe++;
+                $(".circle").attr("src", './imgs/circle' + currSwipe + '.png');
+                $('.helpImgCon').animate({
+                    scrollLeft: currSwipe * winWidth
+                }, 400);
+
+            } else if (deltaX > 50) {
+                if (currSwipe > 0) currSwipe--;
+                $(".circle").attr("src", './imgs/circle' + currSwipe + '.png');
+                $('.helpImgCon').animate({
+                    scrollLeft: currSwipe * winWidth
+                }, 400);
+            }
+        }, false);
+
+        //월 일 셀렉트 - 스와이프
+        let cal = document.getElementById('calSwipe')
+
+        cal.addEventListener('touchstart', function (e) {
+            // Cache the client X/Y coordinates
+            clientX = e.touches[0].clientX;
+
+        }, false);
+
+        cal.addEventListener('touchend', function (e) {
+
+            var deltaX = e.changedTouches[0].clientX - clientX;
+
+            console.log(deltaX)
+
+            if (deltaX < -50) {
+                if (month < 11) month++;
+                $('.calContainer').animate({
+                    scrollLeft: month * winWidth
+                }, 400);
+
+            } else if (deltaX > 50) {
+                if (month > 0) month--;
+                $('.calContainer').animate({
+                    scrollLeft: month * winWidth
+                }, 400);
+
+            }
+        }, false);
+
+        // 월 일 셀렉트
+        $(".selectMonth").click(function () {
+            monthSelect(month)
+            $('.monthContainer').css('display', 'flex')
+        });
+
+        $(".confirm").click(function () {
+            $('.calContainer').animate({
+                scrollLeft: month * winWidth
+            }, 400);
+            $('.monthContainer').css('display', 'none')
+        });
+
+        $(".month").click(function (e) {
+            month = e.target.id.substring(1)
+            console.log(month)
+            monthSelect(month)
+        });
+
+        let prevScroll;
+        $(".questImg").click(function () {
+            prevScroll = $(window).scrollTop()
+
+            console.log(prevScroll)
+            $('.helpContainer').css('display', 'flex')
+            $('.chatContainer').css({
+                'position': 'fixed',
+                'top': -prevScroll + 'px'
+            })
+        });
+
+        $(".closeBox").click(function () {
+            $('.helpContainer').css('display', 'none')
+            $('.chatContainer').css({
+                'position': 'relative',
+                'top': 0
+            })
+            $('html, body').animate({
+                scrollTop: prevScroll + 'px'
+            }, 0);
+        });
+
+        //아이폰일때 포커싱
+        $("input").focus(function () {
+
+            if (isIphone) {
+
+                delUnder()
+                $('.searchDiv').css('display', 'none')
+                document.getElementById('cb').style.bottom = "0px"
+                $('.underBar').css('display', 'none')
+                $(".chatContainer").css('padding-bottom', '70px')
+            }
+        });
+
+        let sendClick = false;
+        $('.sendBtn').click(function () {
+            senClick = true;
+        })
+
+
+        $("input").focusout(function () {
+            if (isIphone) {
+                setTimeout(function () {
+                    $('.underBar').css('display', 'flex')
+                    $('.searchDiv').css('display', 'flex')
+                    document.getElementById('under1').style.display = 'flex'
+                    document.getElementById('cb').style.bottom = "16.53vw"
+                    $(".chatContainer").css('padding-bottom', underHeight + 70 + 'px')
+                    var h = $(".chatContainer").height()
+                    window.scrollTo(0, h);
+                }, 50);
+
+            }
+        });
+
+    });
+
+    $(window).on('load', function () {
+        load()
+        $('.splash').css('display', 'none')
+        var h = $(".chatContainer").height()
+        window.scrollTo(0, h);
+    });
+
+    $(window).resize(function () {
+        //window.toolbar.visible = false;
+
+        var currentHeight = window.innerHeight;
+
+        // 원래 사이즈였다가 키보드 올라왔을 때
+        if (initialHeight * 0.8 > currentHeight) {
+            undersize = true;
+        }
+
+        // 줄어들었다가 키보드 없어졌을 때
+        else if (undersize && currentHeight > initialHeight * 0.8) {
+            undersize = false;
+        }
+
+        // 챗봇화면일 때     
+        if (isChat) {
+            if (undersize) {
+                delUnder();
+                document.getElementById('cb').style.bottom = "0px"
+                $('.underBar').css('display', 'none')
+                $(".chatContainer").css('padding-bottom', '70px')
+                //스크롤 안됐으면 맨밑으로
+                if ($(window).scrollTop() == chatScroll) {
+                    var h = $(".chatContainer").height()
+                    window.scrollTo(0, h);
+                }
+
+            } else {
+                $('.underBar').css('display', 'flex')
+                document.getElementById('under1').style.display = 'flex'
+                document.getElementById('cb').style.bottom = "16.53vw"
+                $(".chatContainer").css('padding-bottom', underHeight + 70 + 'px')
+                var h = $(".chatContainer").height()
+                window.scrollTo(0, h);
+                chatScroll = $(window).scrollTop();
+            }
+        }
+
+        // 캠퍼스맵일 때
+        if (disableResize) {
+            // 서치바 높이 정하기
+            let boxWidth = $('.boxSelect').css('display') == 'none' ? 0 : $('.boxSelect').height()
+            console.log(boxWidth)
+            $('.searchDiv').css('height', window.innerHeight + 45 - underHeight + 'px')
+            $('.underSearch').css('height', window.innerHeight + 45 - underHeight - 60 + 'px')
+            $('.buildilList').css('height', $('.underSearch').height() - boxWidth + 'px')
+
+            if (searchOff) {
+                $(".searchDiv").css("top", window.innerHeight - underHeight - 45 + 'px');
+                $('.buildilList').css('height', $('.underSearch').height() - boxWidth + 'px')
+            }
+        }
+
+    });
+
+    $(document).on("mobileinit", function () {
+        $.mobile.loader.prototype.options.disabled = true;
+        // As submitted by @Aras
+        $.mobile.loading("hide");
+        // (or presumably as submitted by @Pnct)
+        $.mobile.loading().hide();
+        $.mobile.loadingMessage = false;
+    });
+
+    function load() {
+        // 챗봇화면 맨 밑스크롤
+        $(".chatContainer").css('padding-bottom', underHeight + 70 + 'px')
+        $('html, body').animate({
+            scrollTop: $('.underBar').offset().top
+        }, 0);
+        var h = $(".chatContainer").height()
+        window.scrollTo(0, h);
+
+        // 서치바 높이 정하기
+        $('.searchDiv').css('height', window.innerHeight + 45 - underHeight + 'px')
+        $('.underSearch').css('height', window.innerHeight + 45 - underHeight - 60 + 'px')
+        $('.buildilList').css('height', $('.underSearch').height() - $('.boxSelect').height() + 'px')
+        $(".searchDiv").css("top", window.innerHeight - underHeight - 45 + 'px');
+
+        //맵확대
+        $(".mapContainer").css("zoom", "160%");
+        $(".selectCateCon").css("zoom", "60%");
+
+
+        //캘린더
+        monthSelect(month)
+        $('.calContainer').css('display', 'none')
+
+        //챗봇
+        $('.chatTextbox').css('bottom', underHeight)
+
+    }
+
+
+    function delUnder() {
+        document.getElementById('under1').style.display = 'none'
+        document.getElementById('under2').style.display = 'none'
+        document.getElementById('under3').style.display = 'none'
+        document.getElementById('under4').style.display = 'none'
+    }
+
+    function show(n) {
+
+        // 언더바 높이가져오기
+        let underHeight = $('#under1').height();
+        console.log(underHeight);
+        $('.clickArea').height(underHeight);
+
+        //초기화
+        delUnder();
+
+        $('.readyContainer').css('display', 'none')
+        $('.calContainer').css('display', 'none')
+        $('.chatContainer').css('display', 'none')
+        $('.mapContainer').css('display', 'none')
+        $('.searchDiv').css('display', 'none')
+        $('.buildingPrintCon').css('display', 'none')
+
+        if (n != 1) {
+            $('.chatBox').css('display', 'none')
+        }
+
+        //언더바 바꾸기
+        document.getElementById('under' + n).style.display = 'flex'
+
+        if (n == 1) {
+            console.log('챗봇')
+            $('.chatBox').css('display', 'flex')
+            $('.chatContainer').css('display', 'flex')
+            isChat = true;
+            disableResize = false;
+            // $('html, body').animate({
+            // scrollTop: $('.underBar').offset().top
+            // }, 'fast');
+            var h = $(".chatContainer").height()
+            window.scrollTo(0, h);
+
+        } else if (n == 2) {
+            isChat = false;
+            console.log('캘린더')
+            console.log(month)
+            var winWidth = window.innerWidth;
+
+            //셋팅
+            $('.calContainer').css('display', 'flex')
+            $('.calContainer').animate({
+                scrollLeft: month * winWidth
+            }, 0);
+
+
+
+        } else if (n == 3) {
+            isChat = false;
+            console.log('수업 채팅방')
+            $('.readyContainer').css('display', 'flex')
+        } else {
+            isChat = false;
+            console.log('스마트 맵')
+            $('.mapContainer').css('display', 'flex')
+            $('.searchDiv').css('display', 'block')
+            //$('.buildingPrintCon').css('display', 'flex')
+            disableResize = true
+            window.scrollTo(0, window.innerHeight / 4);
+            document.getElementById('target').scrollTo(window.innerWidth / 2, 0)
+        }
+    }
+
+    function sendMsg() {
+        //현재시간
+        var date = new Date();
+        var month = date.getMonth();
+        var hour = date.getHours();
+        var minutes = date.getMinutes();
+        var middle = '오전 '
+
+        if (hour > 13) {
+            middle = '오후 ';
+            hour -= 12;
+        }
+
+        if (hour.toString().length == 1) {
+            hour = '0' + hour;
+        }
+
+        if (minutes.toString().length == 1) {
+            console.log(minutes.toString().length)
+            minutes = '0' + minutes;
+        }
+
+        var txt = document.getElementById('chatInput').value
+        document.getElementById('cC').innerHTML += '<div class="myCon">' + '<div class="sendTime">' +
+            middle + hour + ':' + minutes + '</div>' + '<div class="myChat">' + txt + '</div>' + '</div>'
+        document.getElementById('chatInput').value = ''
+        //$("body").animate({ scrollTop: $(".chatContainer").height() }, 0);
+        var h = $(".chatContainer").height()
+        window.scrollTo(0, h);
+
+        // 인풋 받아오기
+        // const API_ENDPOINT = "https://www.coginsight.net/service/#/a539b5cf-eb4f-4d45-9b07-aafd52d395a2/4aqhrKRi6q0XV6gPtOUGv9s08Ue92riWmQqnBseSG1T1jSqhjANspR7ngj8pr2nAVVvXKnh208o6JuWz7NSfmQ==|bgSwCDDQgFVEGNxr3aAcB6yhMjhlhtLWYAdqKBOmA1Y=?input="
+        // let url = 'https://www.coginsight.net/service/#/a539b5cf-eb4f-4d45-9b07-aafd52d395a2?token={4aqhrKRi6q0XV6gPtOUGv9s08Ue92riWmQqnBseSG1T1jSqhjANspR7ngj8pr2nAVVvXKnh208o6JuWz7NSfmQ==|bgSwCDDQgFVEGNxr3aAcB6yhMjhlhtLWYAdqKBOmA1Y=}&input={"text”:”txt”,”data":{"key":"value"},"reset":true}'
+        // console.log(url)
+        // let response = fetch(url, {mode: 'no-cors'}).then(res =>
+        //     res
+        // );
+        // console.log(response)
+
+        // 저장
+        let inputLog = JSON.parse(localStorage.getItem("inputTxt"));
+        let txtInfo = {
+            'middle': middle,
+            'hour': hour,
+            'minutes': minutes,
+            'txt': txt
+        }
+        inputLog.push(txtInfo)
+        localStorage.setItem("inputTxt", JSON.stringify(inputLog));
+    }
+
+    function monthSelect(n) {
+        month = n
+        var winWidth = window.innerWidth;
+        $('.month').css('color', 'black')
+        $('.month').css('background-color', 'white')
+        $(".month" + month).css('color', 'white')
+        $(".month" + month).css('background-color', '#A1DD70')
+    }
+
+    function selectCategory(category) {
+
+        $('.category').css({
+            'color': 'black',
+            'background-color': 'white'
+        })
+
+        $('#' + category).css({
+            'color': 'white',
+            'background-color': '#98C670'
+        })
+
+        if (category != 'bus') {
+            $('.clicked').css("display", "none");
+            $('.buildingPrintCon').css('display', 'none')
+
+            let buildings = $('.' + category + 'Build')
+            for (let build of buildings) {
+                let id = build.classList[1].substring(6);
+                $('.c_' + id).css("display", "block");
+            }
+        }
+    }
+
+    function buildPrint(category) {
+        let ctText;
+        switch (category) {
+            case 'convenience':
+                ctText = '생협 / 편의점'
+                break;
+            case 'schoolMeal':
+                ctText = '학식'
+                break;
+            case 'restaurant':
+                ctText = '레스토랑'
+                break;
+            case 'study':
+                ctText = '열람실'
+                break;
+            case 'print':
+                ctText = '인쇄실'
+                break;
+            case 'etc':
+                ctText = '기타'
+        }
+
+        $('.boxSelect').css('display', 'none')
+        $('.buildilList').css('height', $('.underSearch').height() + 'px')
+        $('#buildTitle').text(ctText)
+        //카테고리 해당 건물 출력
+        $('.bList').css('display', 'none')
+        $('.' + category + 'Build').css('display', 'block')
+        $('.buildilList').animate({
+            scrollTop: 0
+        }, 0);
+    }
+
+    function selectBuild() {
+        $('.clicked').css('display', 'none')
+        $('.unClicked').css('display', 'block')
+        $('.c_82').css('display', 'block')
+
+        $('.builSelecCon').css('display', 'flex')
+    }
+
+    function focusBuilding(id, fid) {
+        console.log(id)
+        let bid = id
+        $('.facilLine').css('background-color', 'white')
+
+        //sk관 예외처리
+        if (bid == '81') {
+            if (globalCategory == 'convenience') {
+                bid = '82'
+            }
+        }
+
+        // 클릭 이미지
+        $('.clicked').css("transform", "");
+        $('.c_' + bid).css("display", "block");
+        $('.u_' + bid).css("display", "none");
+
+        //정보출력
+        $(".selectCateCon").animate({
+            'opacity': '1'
+        }, 0);
+
+        //$('.searchDiv').css('height', window.innerHeight + 45 - underHeight + 'px')
+        $(".searchDiv").css("top", window.innerHeight - underHeight - 45 + 'px');
+
+        $(".searchDiv").animate({
+            'top': $() - underHeight - 45 + 'px'
+        }, 0);
+
+        $('.buildingPrintCon').css("display", "none");
+        $('.info' + bid).css("display", "flex");
+
+        if (globalCategory && globalCategory != 'bus') {
+            let facilDivs = $('.' + globalCategory + 'Div')
+            for (let facilDiv of facilDivs) {
+                console.log(facilDiv)
+                facilDiv.parentNode.prepend(facilDiv)
+            }
+        }
+
+        // 시설 순서바꾸기
+        if (fid) {
+            $('#' + fid).css('background-color', '#eefbe6')
+            $('#' + fid).parent().prepend($('#' + fid));
+            $('#' + fid).parent().parent().prepend($('#' + fid).parent());
+        }
+        $('.scrollCon').scrollTop(0);
+    }
+</script>

@@ -1,0 +1,1686 @@
+/* 글씨체 */
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+
+.nanumsquare {
+    font-family: 'NanumSquare', sans-serif !important;
+}
+
+body{
+    font-family: 'NanumSquare';
+    max-height: 100vh;
+}
+
+.ui-page{
+    border: none;
+    outline: none;
+}
+
+.ui-loader-header{
+    display: none;
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lbHead{
+    font-weight: 700;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.mapContainer::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    background: transparent !important;
+  }
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  /* Hide scrollbar for IE and Edge */
+  .mapContainer {
+    -ms-overflow-style: none;
+  }
+
+/* underBar */
+.underBar{
+    height: 16.53vw;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    bottom:0;
+    max-height: 16.53vw;
+    max-width: 100vw;
+    z-index: 6;
+}
+
+.underIcon{
+    height: 16.53vw;
+    width: 100vw;
+    position: fixed;
+    bottom:0;
+    display: none;
+}
+
+.clickArea{
+    height: 16.53vw;
+    width: 25vw;
+    display: flex;
+    z-index: 6;
+}
+
+/* splash */
+.loadCon{
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    /* height: 100vh; */
+    z-index: 10;
+    /* -webkit-animation-name: fade;
+    -webkit-animation-duration: 7s; 
+    -webkit-animation-timing-function: ease-in;
+    animation-name: fade;
+    animation-duration: 7s;
+    animation-timing-function: ease-in;
+    opacity: 0; */
+}
+
+#loadImg{
+    width: 80vw;
+    height: 64vw;
+}
+#loadImg2{
+    display: none;
+}
+
+.loadTxt{
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes fade {
+    0% {opacity: 1}
+    75% {opacity: 1}
+    100% {opacity: 0}
+  }
+  
+  /* Standard syntax */
+  @keyframes fade {
+    0% {opacity: 1}
+    75% {opacity: 1}
+    100% {opacity: 0}
+  }
+
+  /* 채팅방 */
+  .readyContainer{
+      top:0;
+      width: 100vw;
+      position: fixed;
+      padding-top: 20vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      display: none;
+  }
+
+  .readyImg{
+      width: 70vw;
+      margin: 20px;
+  }
+
+  .readyText{
+    margin: 5px;
+  }
+
+  .mrProfile{
+      width: 10vw;
+      height: 10vw;
+  }
+
+  .welcom{
+      margin: 0 20px 20px 20px;
+      padding-top: 20px;
+  }
+
+  .infoBox{
+    margin: 0 20px 0px 20px;
+  }
+
+  .welcomemsg{
+      background-color: #E5F5B9;
+      font-family: 'NanumSquare';
+      line-height: 150%;
+      color:#303030;
+      border-radius: 0 20px 20px 20px;
+      margin: 5px 10px;
+      width: 55vw;
+      font-size: 12px;
+  }
+
+  .returnTxt{
+    padding: 20px;
+    box-sizing: border-box;
+    width: 55vw;
+  }
+
+  .infoBox{
+      display: flex;
+  }
+
+  .linkBox{
+      position: relative;
+      padding: 15px;
+      background-color: #F7FFE3 ;
+      border-radius: 0 0 20px 20px;
+      margin-top: -10px;
+  }
+
+  .linkArrow{
+      top:15px;
+      position: absolute;
+      right: 10px;
+      padding: 0 5px 0 5px;
+      color:#929b97;
+  }
+
+.rBtn{
+    border-bottom: 0.5px solid #E5F5B9;
+    padding: 15px;
+    background-color: #F7FFE3;
+}
+
+.welcomemsg>.rBtn:last-child{
+    border-radius: 0 0 20px 20px;
+}
+
+  .returnImg{
+    margin: -10px 0 20px 0;
+    width: 50vw;
+    height:auto;
+  }
+
+  .questImg{
+      position: fixed;
+      right:20px;
+      width: 10vw;
+      height: 10vw;
+      margin-top: 15px;
+      z-index: 2;
+  }
+
+  .sendTime{
+    font-size: 10px;
+  }
+
+  .lastMsg{
+    display: flex;
+    align-items: flex-end;
+  }
+  .chatContainer{
+      /* display: none; */
+      flex-direction: column;
+      padding-bottom: 80px;
+      width: 100vw;
+  }
+
+  .myCon{
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      margin-bottom: 5px;
+  }
+  .myChat{
+    background-color: #A1DD70;
+    padding: 20px;
+    font-family: 'NanumSquare';
+    line-height: 150%;
+    color:#303030;
+    border-radius: 20px 20px 0px 20px;
+    margin: 5px 10px;
+    max-width: 50vw;
+    font-size: 12px;
+    right: 20px;
+  }
+
+  .helpContainer{
+      position: fixed;
+      top:0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(5, 5, 5, 0.5);
+      z-index: 4;
+      display: none;
+      align-items: center;
+      justify-content: flex-start;
+  }
+
+  .helpImgCon{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden;
+  }
+
+  .middleCon{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .closeBox{
+    display: flex;
+    align-self: flex-end;
+    margin: 5px;
+    margin-bottom: 45px;
+    margin-right:20px;
+  }
+
+  .circle{
+    width: 90px;
+    margin: 20px;
+  }
+
+  .helpImg{
+      width: 100vw;
+      height: 129vw;
+  }
+
+  .closeBox{
+      width: 25px;
+      height: 25px;
+  }
+
+  /* 캘린더 */
+
+  .calContainer{
+      position: fixed;
+      top:0;
+    -webkit-overflow-scrolling: touch;
+      /* display: none; */
+      display: flex;
+      flex-direction: row;
+      overflow-x: hidden;
+      overflow-y: hidden;
+      /* margin-top: 2vh; */
+      border: none;
+      width: 100vw;
+      height: 177vw;
+  }
+  .calander{
+      width: 100vw;
+      height: 177vw;
+      box-sizing: border-box;
+      padding: 0 10px;
+  }
+
+  .selectMonth{
+      width: 39vw;
+      height: 14vw;
+      position: fixed;
+      top:0;
+      left:0;
+  }
+
+  .monthContainer{
+    position: fixed;
+      top:0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(5, 5, 5, 0.5);
+      z-index: 4;
+      display: none;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .selectBox{
+    width: 80vw;
+    background-color:white;
+    color: #485550;
+    border-radius: 15px 15px 15px 15px;
+  }
+
+  #monthClose{
+    margin-bottom: 20px;
+  }
+
+  #monthCon{
+    margin-bottom: 70px;
+  }
+
+  .header{
+    width: 80vw;
+    height: 10vh;
+    padding: 18px 20px 0px 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+
+  .line{
+    padding: 0px 10px;
+    width: 80vw;
+    height: 8vh;
+    box-sizing: border-box;
+    margin: 10px 0px;
+  }
+
+  .month{
+    width: 55px;
+    height: 55px;
+    border-radius: 100px;
+    margin: 5px;
+  }
+
+  .confirm{
+      border-radius: 0 0 15px 15px;
+      color: white;
+      background-color: #A1DD70;
+      padding: 20px;
+      margin-top: 20px;
+  }
+
+/* 챗봇 */
+.chatBox{
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    display: flex;
+    bottom: 16.53vw;
+    justify-content: center;
+    align-items: center;
+    border-top: 0.5px solid gainsboro;
+    z-index: 3;
+    background-color: white;
+}
+
+.floatBox{
+    box-sizing: border-box;
+    display: flex;
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    bottom: 16.53vw;
+    align-items: center;
+    border-top: 0.5px solid rgb(184, 174, 174);
+    z-index: 3;
+    background-color: white;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: 0px 12px 0px 12px;
+    display: none;
+}
+
+.selectInput{
+    font-size: 13px;
+    padding: 11px 16px 11px 16px;
+    background-color: #E5F5B9;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+.greenBtn{
+    height: 35px;
+    margin: 0 10px;
+}
+
+.chatTextbox{
+    height: 35px;
+    width: 78vw;
+    border: solid 1px;
+    border-radius: 100px;
+    border-color: #A1DD70;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sendBtn{
+    height: 20px;
+    margin: 0 10px;
+}
+
+input{
+    border: none;
+    height: 25px;
+    width: 60vw;
+    margin: 10px;
+    box-sizing: border-box;
+    color: black;
+}
+
+input:focus{
+    outline:none;
+}
+
+.svgSample{
+    width: 200px;
+    stroke: red;
+    stroke-width: 10px;
+}
+
+/* 스마트맵 */
+.mapContainer{
+    display: none;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.mapBg{
+    width: 640px;
+    height: 640px;
+    padding: 0 40px 150px 0;
+    background-color: #D2EAC3;
+}
+
+.clicked{
+    display: none;
+}
+
+.buildCon{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+}
+
+.building{
+    position: absolute;
+}
+
+.buildingHead{
+    margin-bottom: 15px ;
+    padding: 0 20px 0 20px;
+    border-bottom: 1px solid rgb(179, 179, 179);
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.notFacil{
+    padding: 0px 20px;
+}
+
+/* .법인행정동 43 */
+
+.u_43{
+    top: 90.133px;
+    left: 390.768px;
+    width: 47.963px;
+    height: 28.55px;
+}
+
+.c_43{
+    top: 76px;
+    left: 390.768px;
+    width: 47.963px;
+    height: 44.683px;
+    bottom:-1.5px;
+}
+
+/* .테니스장 61 */
+
+.u_61{
+    top:133.183px;
+    left: 416.397px;
+    width: 30.197px;
+    height: 16.042px;
+}
+
+.c_61{
+    top:118px;
+    left: 412.593px;
+    width: 37.805px;
+    height: 32.225px;
+    bottom:-1px;
+}
+
+/* .산학협력관 45 */
+
+.u_45{
+    top:93.035px;
+    left: 317.6px;
+    width: 55.771px;
+    height: 23.34px;
+}
+
+.c_45{
+    top:76px;
+    left: 317.6px;
+    width: 55.771px;
+    height: 42.375px;
+    bottom:-1px;
+}
+
+/* .약초원 49 */
+
+.u_49{
+    top:118.834px;
+    left: 292.9835px;
+    width: 14.59px;
+    height: 6.31px;
+}
+
+.c_49{
+    top:104px;
+    left: 286.124px;
+    width: 28.309px;
+    height: 22.144px;
+}
+
+/* .온실 50 */
+
+.u_50{
+    top:144.75px;
+    left: 372.105px;
+    width: 10.579px;
+    height: 6.304px;
+}
+
+.c_50{
+    top:130px;
+    left: 365.691px;
+    width: 23.407px;
+    height: 22.054px;
+}
+
+/* .아산,산공학관 46 */
+
+.u_46{
+    top: 149.524px;
+    left: 265.482px;
+    width: 52.743px;
+    height: 31.097px;
+}
+
+.c_46{
+    top: 134.347px;
+    left: 263.638px;
+    width: 56.431px;
+    height: 47.274px;
+}
+
+/* .E-house 65 */
+
+.u_65{
+    top:151.183px;
+    left:412.372px;
+    width: 32.333px;
+    height: 28px;
+}
+
+.c_65{
+    top:136.016px;
+    left: 407.495px;
+    width: 42.087px;
+    height: 44.167px;
+}
+
+/* .44 부속 이화금란고등학교 */
+
+.u_44{
+    top:171.931px;
+    left: 234.3275px;
+    width: 25.151px;
+    height: 12.173px;
+}
+
+.c_44{
+    top:157.215px;
+    left: 206.256px;
+    width: 81.294px;
+    height: 27.889px;
+}
+
+/* .63,64 한우리집 */
+
+.u_63{
+    top: 180.769px;
+    left: 440.5775px;
+    width: 37.164px;
+    height: 30.414px;
+}
+
+.c_63{
+    top: 165.675px;
+    left: 440.257px;
+    width: 37.805px;
+    height: 46.508px;
+}
+
+/* .41 교육관 A동 */
+
+.u_41{
+    top: 187.245px;
+    left: 225.108px;
+    width: 28.298px;
+    height: 15.839px;
+}
+
+.c_41{
+    top: 173.37px;
+    left: 216.757px;
+    width: 45px;
+    height: 30.714px;
+}
+
+/* .42 교육관 B동 */
+
+.u_42{
+    top:208.31px;
+    left: 216.562px;
+    width: 27.068px;
+    height: 19.883px;
+}
+
+.c_42{
+    top:193.9px;
+    left: 207.596px;
+    width: 45px;
+    height: 35.293px;
+}
+
+/* .58 종합사회복지관 */
+
+.u_58{
+    top: 211.202px;
+    left: 454.747px;
+    width: 20.051px;
+    height: 20.054px;
+}
+
+.c_58{
+    top: 196.492px;
+    left: 437.42px;
+    width: 54.705px;
+    height: 35.764px;
+}
+
+/* .54,55,56,57 종합과학관 */
+
+.u_54{
+    top: 218.347px;
+    left: 290.263px;
+    width: 67.789px;
+    height: 30.966px;
+}
+
+.c_54{
+    top: 203.602px;
+    left: 290.263px;
+    width: 67.789px;
+    height: 46.711px;
+}
+
+/* .53 인문관 */
+
+.u_53{
+    top: 232.182px;
+    left: 195.4585px;
+    width: 38.881px;
+    height: 24.407px;
+}
+
+.c_53{
+    top: 217.345px;
+    left: 192.072px;
+    width: 45.654px;
+    height: 40.244px;
+}
+
+/* .62 학관 */
+
+.u_62{
+    top: 269.548px;
+    left: 171.155px;
+    width: 45.995px;
+    height: 28.464px;
+}
+
+.c_62{
+    top: 254.226px;
+    left: 171.155px;
+    width: 45.995px;
+    height: 44.786px;
+}
+
+/* .52 이화포스코관 */
+
+.u_52{
+    top: 266.793px;
+    left: 251.622px;
+    width: 47.973px;
+    height: 44.375px;
+}
+
+.c_52{
+    top: 251.877px;
+    left: 249.884px;
+    width: 51.449px;
+    height: 60.291px;
+}
+
+/* .59 진선미관 */
+
+.u_59{
+    top: 281.982px;
+    left: 315.911px;
+    width: 34.677px;
+    height: 20.721px;
+}
+
+.c_59{
+    top: 267.312px;
+    left: 314.347px;
+    width: 37.805px;
+    height: 36.391px;
+}
+
+/* .13 학생문화관 */
+
+.u_13{
+    top: 301.306px;
+    left: 183.043px;
+    width: 40.208px;
+    height: 27.315px;
+}
+
+.c_13{
+    top: 286.216px;
+    left: 180.647px;
+    width: 45px;
+    height: 43.405px;
+}
+
+/* .51 이화역사관 */
+
+.u_51{
+    top: 257.269px;
+    left: 376.303px;
+    width: 22.98px;
+    height: 12.402px;
+}
+
+.c_51{
+    top: 242.579px;
+    left: 365.293px;
+    width: 45px;
+    height: 28.092px;
+}
+
+/* .21 법학관 */
+
+.u_21{
+    top:263.407px;
+    left: 420.643px;
+    width: 39.96px;
+    height: 24.919px;
+}
+
+.c_21{
+    top:248.985px;
+    left: 420.643px;
+    width: 39.96px;
+    height: 40.341px;
+}
+
+/* .48 아령당 */
+
+.u_48{
+    top:293.691px;
+    left: 364.2425px;
+    width: 19.908px;
+    height: 11.228px;
+}
+
+.c_48{
+    top:279.217px;
+    left: 360.042px;
+    width: 28.309px;
+    height: 26.702px;
+}
+
+/* .60 공관 */
+
+.u_60{
+    top: 302.477px;
+    left: 392.124px;
+    width: 28.048px;
+    height: 15.79px;
+}
+
+.c_60{
+    top: 287.284px;
+    left: 392.124px;
+    width: 28.048px;
+    height: 31.983px;
+}
+
+/* .6,7 약학관 */
+
+.u_6{
+    top: 329.585px;
+    left: 238.605px;
+    width: 39.865px;
+    height: 22.716px;
+}
+
+.c_6{
+    top: 314.926px;
+    left: 238.605px;
+    width: 39.865px;
+    height: 38.375px;
+}
+
+/* .5 본관 */
+
+.u_5{
+    top: 346.019px;
+    left: 333.732px;
+    width: 47.963px;
+    height: 27.534px;
+}
+
+.c_5{
+    top: 329.455px;
+    left: 333.732px;
+    width: 47.963px;
+    height: 45.098px;
+}
+
+/* .33 헬렌관 */
+
+.u_33{
+    top: 348.747px;
+    left: 395.894px;
+    width: 48.757px;
+    height: 26.299px;
+}
+
+.c_33{
+    top: 333.877px;
+    left: 393.794px;
+    width: 52.957px;
+    height: 42.169px;
+}
+
+/* .32 100주년기념도서관 */
+
+.u_32{
+    top: 349.72px;
+    left: 469.9955px;
+    width: 50.208px;
+    height: 31.171px;
+}
+
+.c_32{
+    top: 334.667px;
+    left: 460.021px;
+    width: 70.157px;
+    height: 47.224px;
+}
+
+/* .77 부속이화금란중학교 */
+
+.u_77{
+    top: 343.184px;
+    left: 141.937px;
+    width: 23.87px;
+    height: 12.965px;
+}
+
+.c_77{
+    top: 328.147px;
+    left: 115.916px;
+    width: 75.912px;
+    height: 29.002px;
+}
+
+/* .23 영학관 */
+
+.u_23{
+    top:389.091px;
+    left: 445.071px;
+    width: 15.559px;
+    height: 16.918px;
+}
+
+.c_23{
+    top:372.178px;
+    left: 438.696px;
+    width: 28.309px;
+    height: 34.831px;
+}
+
+/* .22 연구관 */
+
+.u_22{
+    top: 401.514px;
+    left: 479.6525px;
+    width: 14.44px;
+    height: 12.511px;
+}
+
+.c_22{
+    top: 386.505px;
+    left: 472.718px;
+    width: 28.309px;
+    height: 28.52px;
+}
+
+/* .24 음악관 */
+
+.u_24{
+    top:417.786px;
+    left: 517.007px;
+    width: 40.653px;
+    height: 23.372px;
+}
+
+.c_24{
+    top:402.865px;
+    left: 517.007px;
+    width: 40.653px;
+    height: 39.293px;
+}
+
+/* .27,28 조형예술관 A동/자연사박물관 */
+
+.u_27{
+    top:426.125px;
+    left: 418.926px;
+    width: 32.418px;
+    height: 20.745px;
+}
+
+.c_27{
+    top:408.591px;
+    left: 384.486px;
+    width: 101.298px;
+    height: 39.279px;
+}
+
+/* .29 조형예술관 B동 */
+
+.u_29{
+    top: 451.549px;
+    left: 447.9895px;
+    width: 17.156px;
+    height: 14.029px;
+}
+
+.c_29{
+    top: 435.753px;
+    left: 428.273px;
+    width: 56.589px;
+    height: 30.825px;
+}
+
+/* .30 조형예술관 C동 */
+
+.u_30{
+    top:463.442px;
+    left: 404.455px;
+    width: 27.627px;
+    height: 24.519px;
+}
+
+.c_30{
+    top:447.996px;
+    left: 389.974px;
+    width: 56.589px;
+    height: 40.965px;
+}
+
+/* .31 조형예술관 조소실기동 */
+
+.u_31{
+    top: 468.782px;
+    left: 444.909px;
+    width: 24.28px;
+    height: 13.64px;
+}
+
+.c_31{
+    top: 454.161px;
+    left: 418.294px;
+    width: 77.51px;
+    height: 29.261px;
+}
+
+/* .26 입학관 */
+
+.u_26{
+    top: 496.98px;
+    left: 389.491px;
+    width: 34.617px;
+    height: 25.579px;
+}
+
+.c_26{
+    top: 481.312px;
+    left: 389.491px;
+    width: 34.617px;
+    height: 42.247px;
+}
+
+/* .78 생활환경관 */
+
+.u_78{
+    top: 375.658px;
+    left: 152.299px;
+    width: 48.299px;
+    height: 22.861px;
+}
+
+.c_78{
+    top: 359.74px;
+    left: 152.299px;
+    width: 48.299px;
+    height: 39.779px;
+}
+
+/* .82,81 이화SK텔레콤관/삼성교육문화관 */
+
+.u_82{
+    top:389.104px;
+    left: 112.9035px;
+    width: 23.883px;
+    height: 20.393px;
+}
+
+.c_82{
+    top:369.181px;
+    left: 65.621px;
+    width: 118.448px;
+    height: 41.316px;
+}
+
+/* .88 국제기숙사 별관 */
+
+.u_88{
+    top: 417.581px;
+    left: 118.9615px;
+    width: 13.848px;
+    height: 11.394px;
+}
+
+.c_88{
+    top: 402.806px;
+    left: 95.669px;
+    width: 60.433px;
+    height: 27.169px;
+}
+
+/* .84 이화신세계관 */
+
+.u_84{
+    top: 413.983px;
+    left: 80.6775px;
+    width: 36.056px;
+    height: 26.423px;
+}
+
+.c_84{
+    top: 398.014px;
+    left: 71.576px;
+    width: 54.259px;
+    height: 43.392px;
+}
+
+/* .87 제2국제기숙사 */
+
+.u_87{
+    top:426.322px;
+    left: 132.2875px;
+    width: 23.87px;
+    height: 19.282px;
+}
+
+.c_87{
+    top:410.706px;
+    left: 117.789px;
+    width: 52.867px;
+    height: 35.898px;
+}
+
+/* .83 이화삼성국제기숙사 */
+
+.u_83{
+    top: 432.719px;
+    left: 164.2055px;
+    width: 23.87px;
+    height: 19.282px;
+}
+
+.c_83{
+    top: 417.505px;
+    left: 138.189px;
+    width: 75.903px;
+    height: 35.496px;
+}
+
+/* .3 중강당/대학원관 */
+
+.u_3{
+    top: 425.679px;
+    left: 255.1155px;
+    width: 32.937px;
+    height: 22.359px;
+}
+
+.c_3{
+    top: 411.184px;
+    left: 240.984px;
+    width: 61.2px;
+    height: 37.854px;
+}
+
+/* .72 다락방 */
+
+.u_72{
+    top:448.268px;
+    left: 81.6405px;
+    width: 9.48px;
+    height: 12.013px;
+}
+
+.c_72{
+    top:432.457px;
+    left: 72.226px;
+    width: 28.309px;
+    height: 28.824px;
+}
+
+/* .74,75 I-House */
+
+.u_74{
+    top: 451.983px;
+    left: 132.7415px;
+    width: 27.882px;
+    height: 24.779px;
+}
+
+.c_74{
+    top: 436.375px;
+    left: 127.336px;
+    width: 38.693px;
+    height: 41.387px;
+}
+
+/* .810 부속초등학교 */
+
+.u_810{
+    top:459.001px;
+    left: 108.106px;
+    width: 17.844px;
+    height: 12.965px;
+}
+
+.c_810{
+    top:443.716px;
+    left: 91.397px;
+    width: 51.262px;
+    height: 29.25px;
+}
+
+/* .85 이화알프스어린이관 */
+
+.u_85{
+    top:459.04px;
+    left: 164.971px;
+    width: 15.575px;
+    height: 17.722px;
+}
+
+.c_85{
+    top:443.695px;
+    left: 136.081px;
+    width: 73.355px;
+    height: 34.067px;
+}
+
+/* .80 부속유치원 */
+
+.u_80{
+    top: 462.173px;
+    left: 185.762px;
+    width: 23.662px;
+    height: 14.589px;
+}
+
+.c_80{
+    top: 445.604px;
+    left: 176.506px;
+    width: 42.174px;
+    height: 32.158px;
+}
+
+/* .2 대강당 */
+
+.u_2{
+    top: 447.259px;
+    left: 221.274px;
+    width: 37.151px;
+    height: 40.467px;
+}
+
+.c_2{
+    top: 430.238px;
+    left: 218.839px;
+    width: 42.021px;
+    height: 58.488px;
+}
+
+/* .4 대학원 별관 */
+
+.u_4{
+    top:481.781px;
+    left: 261.098px;
+    width: 20.892px;
+    height: 13.583px;
+}
+
+.c_4{
+    top:466.863px;
+    left: 250.044px;
+    width: 43px;
+    height: 29.501px;
+}
+
+/* .8 ECC */
+
+.u_8{
+    top:437.362px;
+    left: 295.634px;
+    width: 55px;
+    height: 62.098px;
+}
+
+.c_8{
+    top:422.034px;
+    left: 295.634px;
+    width: 55px;
+    height: 78.426px;
+}
+
+/* .10,11,12 체육관 */
+
+.u_10{
+    top:446.353px;
+    left: 347.5915px;
+    width: 37.059px;
+    height: 36.668px;
+}
+
+.c_10{
+    top:430.18px;
+    left: 343.597px;
+    width: 45.048px;
+    height: 53.841px;
+}
+
+/* .73 대학교회 */
+
+.u_73{
+    top:518.496px;
+    left: 162.143px;
+    width: 27.994px;
+    height: 22.44px;
+}
+
+.c_73{
+    top:501.326px;
+    left: 157.799px;
+    width: 36.682px;
+    height: 40.61px;
+}
+
+/* .71 국제교육관 */
+
+.u_71{
+    top:502.507px;
+    left: 194.643px;
+    width: 16.268px;
+    height: 38.773px;
+}
+
+.c_71{
+    top:487.191px;
+    left: 181.69px;
+    width: 42.174px;
+    height: 55.089px;
+}
+
+/* .75 100주년기념박물관 */
+
+.u_75{
+    top:513.457px;
+    left: 231.118px;
+    width: 35.029px;
+    height: 25.941px;
+}
+
+.c_75{
+    top:496.435px;
+    left: 213.554px;
+    width: 70.157px;
+    height: 43.963px;
+}
+
+/* .79 운동장 */
+
+.u_79{
+    top:560.23px;
+    left: 175.573px;
+    width: 59.025px;
+    height: 21.481px;
+}
+
+.c_79{
+    top:544.478px;
+    left: 175.573px;
+    width: 59.025px;
+    height: 38.233px;
+}
+
+/* .1 정문 배꽃 벽면 */
+
+.u_1{
+    top:569.352px;
+    left: 252.0485px;
+    width: 34.706px;
+    height: 18.243px;
+}
+
+.c_1{
+    top:553.998px;
+    left: 242.011px;
+    width: 54.781px;
+    height: 34.597px;
+}
+/* .25 이화웰컴센터 */
+
+.u_25{
+    top:573.714px;
+    left: 309.133px;
+    width: 18.31px;
+    height: 7.997px;
+}
+
+.c_25{
+    top:558.201px;
+    left: 294.457px;
+    width: 47.662px;
+    height: 24.51px;
+}
+
+
+/* 스마트맵 */
+
+.selectCateCon{
+    position: fixed;
+    height: fit-content;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    top:25px;
+    padding: 7px;
+    height: 55px;
+    padding-left: 13px;
+}
+
+.category{
+    border-radius: 500px;
+    background-color: white;
+    padding: 3px 20px;
+    height: 35px;
+    margin-right: 10px;
+    font-size: 12px;
+    box-shadow: 1px 1px 1px 1px rgba(112, 112, 112, 0.2)
+}
+
+.searchDiv{
+    overflow: hidden;
+    position: fixed;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    border-radius:25px 25px 0px 0px;
+    box-shadow: 1px -1px 1px 1px rgba(112, 112, 112, 0.2)
+}
+
+.topBar{
+    height: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.indexBar{
+    margin-top: 6px;
+    height: 3px;
+    width: 90px;
+    background-color: #C6C6C6;
+}
+
+.backNclose{
+    padding: 20px 15px;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.underSearch{
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100vw;
+}
+
+.boxSelect{
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.buildilList{
+    padding: 20px 0;
+    overflow-y: auto;
+    /*padding-bottom: 16.53vw;*/
+    box-sizing: border-box;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+
+}
+
+.rtxt{
+    font-size: 14px;
+}
+
+.bHead{
+    margin-bottom: 15px;
+}
+
+.mArrow{
+    margin-left: 10px;
+    width: 6px;
+    height: 14px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.facilBox{
+    margin: 10px;
+    width: 25vw;
+    height: 25vw;
+    background-color: #A1DD70;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxLine{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.innerWrap{
+    width: 61px;
+    display: flex;
+    flex-direction: column;
+}
+
+.innerFacil{
+    font-size: 12px;
+    margin: 3px 0;
+}
+
+.bList{
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.builSelecCon{
+    display: none;
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(5, 5, 5, 0.5);
+    z-index: 4; 
+}
+
+.whiteSelect{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 90vw;
+    height: 114px;
+    margin-bottom: 100px;
+}
+
+.buildBox{
+    box-sizing: border-box;
+    width: 45vw;
+    height: 53px;
+    font-size: 14px;
+}
+
+.buildingPrintCon{
+    display: none;
+    width: 100vw;
+    height: 200px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    background-color: white;
+    position: fixed;
+    bottom: 16.53vw;
+    overflow: hidden;
+}
+
+.scrollCon{
+    overflow-y: auto;
+    height:180px;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    /* width: 95%; */
+}
+
+.buildCloise{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width:13px;
+    height:13px;
+}
+
+.buildName{
+    font-weight: 700;
+    padding: 5px 0;
+    font-size:17px;
+}
+
+.bildTimeLine{
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.cateImg{
+    width: 13px;
+    height: 13px;
+}
+
+.timeTxt{
+    max-width: 160px;
+    font-size: 14px;
+    padding: 0px 13px;
+    line-height: 120%;
+}
+
+.timeEtc{
+    font-size: 11px;
+    color: #9A9A9A
+}
+
+.facilLine{
+    box-sizing: border-box;
+    width: 100vw;
+    display: flex;
+    padding: 10px 20px;
+}
+
+.facilName{
+    font-size: 14px;
+    padding: 0px 13px;
+    line-height: 130%;
+    box-sizing: border-box;
+    width: 120px;
+}
+
+
+.facilInfo{
+    font-size: 11px;
+    color:#9A9A9A
+}
+
+.facilPosition{
+    height: 14px;
+    display: flex;
+    justify-content: start;
+}
+
+.facilTime{
+    padding-top: 8px;
+    line-height: 140%;
+}
+
+.facilCateDiv{
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+.buildingPrint{
+    /* padding: 15px 0px;  */
+    color: #485550;
+    font-size: 14px;
+}
